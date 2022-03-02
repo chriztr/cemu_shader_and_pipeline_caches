@@ -58,5 +58,5 @@ jobs:
 
       - uses: actions/upload-artifact@v2
         with:
-          name: shaders.zip
-          path: dist/shaders.zip
+          name: shaders
+          path: dist/dl
