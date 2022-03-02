@@ -62,19 +62,14 @@ jobs:
           name: shaders
           path: dist/dl
 
-      - name: Create Release
-        id: create_release
-        uses: actions/create-release@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          tag_name: ${{ github.ref }}
-          release_name: Release ${{ github.ref }}
-          draft: false
-          prerelease: false
+      - name: Get current date
+        id: date
+        run: echo "::set-output name=date::$(date +'%Y-%m-%d')"
 
-      - name: Upload artifacts
+      - name: Create release
         uses: ncipollo/release-action@v1
         with:
+          tag: tag-${{ steps.date.outputs.date }}
+          name: release-${{ steps.date.outputs.date }}
           artifacts: "shaders.zip"
           token: ${{ secrets.GITHUB_TOKEN }}
