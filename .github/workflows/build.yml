@@ -74,11 +74,7 @@ jobs:
           prerelease: false
 
       - name: Upload artifacts
-        uses: actions/upload-release-asset@v1
-        env:
-          GITHUB_TOKEN: ${{ github.token }}
+      - uses: ncipollo/release-action@v1
         with:
-          upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: dist/dl
-          asset_name: shaders.zip
-          asset_content_type: application/zip
+          artifacts: "shaders.zip"
+          token: ${{ secrets.GITHUB_TOKEN }}
