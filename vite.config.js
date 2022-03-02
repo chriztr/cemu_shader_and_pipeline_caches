@@ -19,7 +19,6 @@ export default defineConfig({
 
 import fs from 'fs'
 import path from 'path'
-import JSZip from 'jszip'
 
 function getAllFiles(dirPath, arrayOfFiles) {
   files = fs.readdirSync(dirPath)
@@ -43,21 +42,7 @@ mkdir('public/dl')
 mkdir('public/dl/shaderCache')
 mkdir('public/dl/shaderCache/transferrable')
 
-var zip = new JSZip();
-
 fileArr = [...getAllFiles('shaders'), ...getAllFiles('pipelines')]
-fileArr.map(function(f, index) {
-  var filename = path.win32.basename(f)
-  fs.readFile(f, (err, data) => {
-    fs.writeFileSync(`public/dl/shaderCache/transferrable/${filename}`, data)
-    /*zip.file(`shaderCache/transferrable/${filename}`, data, { binary: true })
-    
-    var folderArr = []
-    zip.folder('shaderCache/transferrable').forEach(function (relativePath, file) { folderArr.push(relativePath) })
-    if (folderArr.length == fileArr.length - 1) {
-      var zipname = 'public/shaders.zip'
-      zip.generateNodeStream({type:"nodebuffer", binary: true, compression: 'DEFLATE' })
-      .pipe(fs.createWriteStream(zipname))
-    }*/
-  })
+.map(function(f, index) {
+  fs.readFile(f, (err, data) => fs.writeFileSync(`public/dl/shaderCache/transferrable/${path.win32.basename(f)}`, data))
 })

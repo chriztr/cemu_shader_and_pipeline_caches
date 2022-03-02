@@ -26,6 +26,7 @@ coverage
 *.sln
 *.sw?
 
+shaderCache
 public/dl
 public/shaders.zip
 yarn.lock
