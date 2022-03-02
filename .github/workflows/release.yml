@@ -26,6 +26,9 @@ jobs:
       - name: Output shaders
         run: node release.js
 
+      - name: Zip shaders
+        run: zip -q -r -9 "shaders.zip" shaderCache
+
       - name: Get current date
         id: date
         run: echo "::set-output name=date::$(date +'%Y-%m-%d-%H%M')"
@@ -35,4 +38,5 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           tag: tag-${{ steps.date.outputs.date }}
           name: shaders-${{ steps.date.outputs.date }}
-          files: shaders:shaderCache
+          gzip: false
+          files: shaders.zip
