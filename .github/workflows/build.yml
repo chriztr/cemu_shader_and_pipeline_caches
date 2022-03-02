@@ -71,5 +71,6 @@ jobs:
         with:
           tag: shaders-tag-${{ steps.date.outputs.date }}
           name: shaders-release-${{ steps.date.outputs.date }}
-          artifacts: "shaders"
+          artifacts: shaders
+          artifactContentType: zip
           token: ${{ secrets.GITHUB_TOKEN }}
