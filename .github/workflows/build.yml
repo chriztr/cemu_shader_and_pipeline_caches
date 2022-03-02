@@ -3,13 +3,13 @@ name: build
 on:
   # trigger deployment on every push to main branch
   push:
-    branches: [ main, master ]
+    branches: main
   # trigger deployment manually
   workflow_dispatch:
 
 jobs:
   build:
-    runs-on: macos-latest
+    runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v2
@@ -55,22 +55,3 @@ jobs:
         env:
           # @see https://docs.github.com/en/actions/reference/authentication-in-a-workflow#about-the-github_token-secret
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Create artifacts
-        uses: actions/upload-artifact@v2
-        with:
-          name: shaders
-          path: dist/dl
-
-      - name: Get current date
-        id: date
-        run: echo "::set-output name=date::$(date +'%Y-%m-%d')"
-
-      - name: Create release
-        uses: ncipollo/release-action@v1
-        with:
-          tag: shaders-tag-${{ steps.date.outputs.date }}
-          name: shaders-release-${{ steps.date.outputs.date }}
-          artifacts: shaders
-          artifactContentType: zip
-          token: ${{ secrets.GITHUB_TOKEN }}
