@@ -44,7 +44,7 @@ export default {
       suffixArr.map(function(x, index) {
         var filename = `${titleID}${x}.bin`
         console.log(`${index}/${suffixArr.length} - ${filename}`)
-        zip.file(`shaderCache/transferrable/${filename}`, httpGet(`/dl/${filename}`), { binary: true })
+        zip.file(`shaderCache/transferrable/${filename}`, httpGet(`/dl/shaderCache/transferrable/${filename}`), { binary: true })
       })
 
       var filename = titleID

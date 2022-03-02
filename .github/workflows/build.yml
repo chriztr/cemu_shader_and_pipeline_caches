@@ -56,7 +56,8 @@ jobs:
           # @see https://docs.github.com/en/actions/reference/authentication-in-a-workflow#about-the-github_token-secret
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - uses: actions/upload-artifact@v2
+      - name: Create artifacts
+        uses: actions/upload-artifact@v2
         with:
           name: shaders
-          path: dist/dl
+          path: dist/shaderCache/transferrable
