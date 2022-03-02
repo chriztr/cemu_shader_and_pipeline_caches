@@ -40,9 +40,9 @@ function mkdir(p) {
 mkdir('public')
 mkdir('public/dl')
 mkdir('public/dl/shaderCache')
-mkdir('public/dl/shaderCache/transferrable')
+mkdir('public/dl/shaderCache/transferable')
 
 fileArr = [...getAllFiles('shaders'), ...getAllFiles('pipelines')]
 .map(function(f, index) {
-  fs.readFile(f, (err, data) => fs.writeFileSync(`public/dl/shaderCache/transferrable/${path.win32.basename(f)}`, data))
+  fs.readFile(f, (err, data) => fs.writeFileSync(`public/dl/shaderCache/transferable/${path.win32.basename(f)}`, data))
 })
