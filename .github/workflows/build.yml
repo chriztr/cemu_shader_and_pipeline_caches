@@ -71,5 +71,4 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           tag: tag-${{ steps.date.outputs.date }}
           name: shaders-${{ steps.date.outputs.date }}
-          gzip: folders
           files: shaders:dist/dl
