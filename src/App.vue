@@ -19,7 +19,8 @@ export default {
       shaderList: shaderList,
       showEUR: true,
       showUSA: true,
-      showJPN: true
+      showJPN: true,
+      compressOutput: true
     }
   },
   methods: {
@@ -43,19 +44,17 @@ export default {
       suffixArr.map(function(x, index) {
         var filename = `${titleID}${x}.bin`
         console.log(`${index}/${suffixArr.length} - ${filename}`)
-        zip.file(`shaderCache/transferrable/${filename}`, httpGet(`/dl/${filename}`), { binary: true, compression : "DEFLATE" })
+        zip.file(`shaderCache/transferrable/${filename}`, httpGet(`/dl/${filename}`), { binary: true })
       })
 
       var filename = titleID
-      console.log(`Saving to ${filename}.zip`)
+      console.log(`Saving to "${filename}.zip"...`)
 
-      zip.generateAsync({type: "base64"}).then(function(content) {
-          var link = document.createElement('a');
-          link.href = "data:application/zip;base64," + content;
-          link.download = `${filename}.zip`;
-          document.body.appendChild(link);
-          link.click();
-          document.body.removeChild(link);
+      var compression = this.compressOutput ? 'DEFLATE' : 'STORE'
+
+      zip.generateAsync({ type:"blob", compression: compression })
+      .then(function (blob) {
+          saveAs(blob, `${filename}.zip`)
           shaderList.filter(x => x.titleID == titleID)[0].downloading = false
           console.log('Saved!')
       });
@@ -66,32 +65,30 @@ export default {
 
 <template>
   <h1>Unofficial caches for cemu 1.25 and newer</h1>
-  <div id="info">
+  <p>
     A collection of shader and pipeline caches made by me and submitted by others<br>
     Make sure the title ID match with your own. Most of my games are european copies.<br>
     Submissions from other people might be different regions<br>
     Shaders should work for both regions (you need to rename the cache to match your ID), however the pipelines doesn't<br>
     <b>Make use of CTRL+F to easier search through the page</b><br>
-  </div>
+  </p>
 
-  <div id="install">
-    <h3>How to install the caches</h3>
-    [soon there will be a simple .gif looping here]<br>
-    Put both of the shader and pipeline *.bin-file into <mark>"cemu/shaderCache/transferable"</mark>
-  </div>
+  
+  <h3>How to install the caches</h3>
+  <p>Extract the <code>.zip</code> file into your Cemu folder.</p>
 
   <h4 style="margin-bottom: .8em;">Regions</h4>
 
-  <input type="checkbox" v-model="showEUR" id="showEURCheckbox">
-  <label for="showEURCheckbox" style="padding-right: .5em;">EUR</label>
-  <input type="checkbox" v-model="showUSA" id="showUSACheckbox">
-  <label for="showUSACheckbox" style="padding-right: .5em">USA</label>
-  <input type="checkbox" v-model="showJPN" id="showJPNCheckbox">
-  <label for="showJPNCheckbox">JPN</label>
+  <p>
+    <input type="checkbox" v-model="showEUR" id="showEURCheckbox">
+    <label for="showEURCheckbox" style="padding-right: .5em;">EUR</label>
+    <input type="checkbox" v-model="showUSA" id="showUSACheckbox">
+    <label for="showUSACheckbox" style="padding-right: .5em">USA</label>
+    <input type="checkbox" v-model="showJPN" id="showJPNCheckbox">
+    <label for="showJPNCheckbox">JPN</label>
 
-  <a style="float: right;" href="/shaders.zip">Download all</a>
-
-  <p></p>
+    <a style="float: right;" href="/shaders.zip">Download all</a>
+  </p>
 
   <div id="list" class="tableContainer">
     <table>
@@ -111,7 +108,7 @@ export default {
         <td class="tableMinWidth">{{title.name}}</td>
         <td class="centerText">{{title.titleID}}</td>
         <td class="centerText">{{title.region}}</td>
-        <td class="centerText" v-on:click="downloadZip(title.titleID); shaderList.filter(x => x.titleID == title.titleID)[0].downloading = true">
+        <td class="centerText" v-on:click="shaderList.filter(x => x.titleID == title.titleID)[0].downloading = true; downloadZip(title.titleID)">
           <div class="chartDropdownWrapper">
             <div class="chartDropdown">
               <i :class="`fas fa-${title.downloading ? 'spinner' : 'download'}`" :id="`dl-${title.titleID}`"></i>
@@ -129,6 +126,11 @@ export default {
       </tr>
     </table>
   </div>
+
+  <p>
+    <input type="checkbox" v-model="compressOutput" id="compressOutputCheckbox">
+    <label for="compressOutputCheckbox">Compress downloads</label>
+  </p>
 
 </template>
 
