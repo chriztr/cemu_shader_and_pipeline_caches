@@ -24,11 +24,10 @@ jobs:
         id: date
         run: echo "::set-output name=date::$(date +'%Y-%m-%d-%H%M')"
 
-      - name: Create release
-        uses: ncipollo/release-action@v1
+      - uses: meeDamian/github-release@2.0
         with:
-          tag: shaders-tag-${{ steps.date.outputs.date }}
-          name: shaders-release-${{ steps.date.outputs.date }}
-          artifacts: shaders
-          artifactContentType: zip
           token: ${{ secrets.GITHUB_TOKEN }}
+          tag: tag-${{ steps.date.outputs.date }}
+          name: shaders-${{ steps.date.outputs.date }}
+          gzip: folders
+          files: shaders:dl/
