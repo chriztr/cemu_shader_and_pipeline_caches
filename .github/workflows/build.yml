@@ -74,7 +74,7 @@ jobs:
           prerelease: false
 
       - name: Upload artifacts
-      - uses: ncipollo/release-action@v1
+        uses: ncipollo/release-action@v1
         with:
           artifacts: "shaders.zip"
           token: ${{ secrets.GITHUB_TOKEN }}
