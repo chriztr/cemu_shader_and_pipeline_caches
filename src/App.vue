@@ -87,7 +87,7 @@ export default {
     <input type="checkbox" v-model="showJPN" id="showJPNCheckbox">
     <label for="showJPNCheckbox">JPN</label>
 
-    <a style="float: right;" href="https://github.com/chriztr/cemu_shader_and_pipeline_caches/releases/latest/download/shaders.tgz">Download all</a>
+    <a style="float: right;" href="https://github.com/chriztr/cemu_shader_and_pipeline_caches/releases/latest/download/shaders.zip">Download all</a>
   </p>
 
   <div id="list" class="tableContainer">
