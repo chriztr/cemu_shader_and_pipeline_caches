@@ -1,4 +1,4 @@
-name: build
+name: release
 
 on:
   # trigger deployment on every push to main branch
@@ -8,7 +8,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  build:
+  release:
     runs-on: ubuntu-latest
 
     steps:
