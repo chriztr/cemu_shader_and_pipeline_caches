@@ -93,8 +93,8 @@ export default {
   <div id="list" class="tableContainer">
     <table>
       <tr>
-        <th>Title ID</th>
         <th>Name</th>
+        <th>Title ID</th>
         <th>Region</th>
         <th>Download</th>
       </tr>
