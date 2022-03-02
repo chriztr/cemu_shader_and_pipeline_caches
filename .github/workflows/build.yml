@@ -69,7 +69,7 @@ jobs:
       - name: Create release
         uses: ncipollo/release-action@v1
         with:
-          tag: tag-${{ steps.date.outputs.date }}
-          name: release-${{ steps.date.outputs.date }}
-          artifacts: "shaders.zip"
+          tag: shaders-tag-${{ steps.date.outputs.date }}
+          name: shaders-release-${{ steps.date.outputs.date }}
+          artifacts: "shaders"
           token: ${{ secrets.GITHUB_TOKEN }}
