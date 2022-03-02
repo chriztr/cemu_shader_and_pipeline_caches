@@ -1,0 +1,114 @@
+body {
+  font-family: arial, sans-serif;
+  margin: auto;
+  width: 70%;
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+.centerText {
+  text-align: center;
+}
+
+@media (max-width: 1100px) {
+  body {
+    width: 90%;
+  }
+
+  .tableContainer { 
+      width: 100% !important;
+      overflow-x: scroll; 
+  }
+
+  .tableMinWidth {
+    min-width: 200px;
+  }
+}
+
+.chartDropdownWrapper {
+  position: relative;
+}
+
+.chartDropdown {
+  font-size: 0.9rem;
+  line-height: 1.4rem;
+  font-weight: 500;
+  cursor: pointer;
+  user-select: none;
+  position: static;
+}
+
+.chartDropdownBox {
+  position: absolute;
+  background-color: #efefef;
+  border-bottom-color: #ddd;
+  text-align: left;
+  border-radius: 0.25rem;
+  white-space: nowrap;
+  max-height: 0px;
+  /*transition: 300ms ease-in-out;*/
+  top: 1.3em;
+  right: 3.4em;
+}
+
+.chartDropdownBox ul {
+  padding-left: 0;
+}
+
+.chartDropdown:hover + div.chartDropdownBox {
+  max-height: 6.6em;
+  /*transition: 300ms ease-in-out;*/
+  padding: 0em 1em;
+}
+
+.chartDropdownBox:hover {
+  max-height: 6.6em;
+  /*transition: 300ms ease-in-out;*/
+  padding: 0em 1em;
+}
+
+.chartDropdown:hover + div.chartDropdownBox li {
+  opacity: 1;
+  max-height: 100%;
+}
+
+.chartDropdownBox:hover li {
+  opacity: 1;
+  max-height: 100%;
+}
+
+.chartDropdownBox li {
+  list-style-type: none;
+  float: none !important;
+  margin: 0 !important;
+  overflow: hidden;
+  opacity: 0;
+  max-height: 0px;
+  /*transition: 300ms ease-in-out;*/
+}
+
+.chartDropdown button {
+  cursor: pointer;
+  border: none;
+  background-color: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  font-weight: inherit;
+  font-family: inherit;
+  color: inherit;
+  padding: inherit;
+}

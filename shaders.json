@@ -1,0 +1,211 @@
+{
+  "0005000010172700": {
+    "name": "Bayonetta 2",
+    "region": "EUR",
+    "comment": "Just started a new game, haven't spent much time with it yet",
+    "author": "chriztr",
+    "shaderCount": 538,
+    "pipelineCount": 809 
+  },
+  "0005000010180700": {
+    "name": "Captain Toad: Treasure Tracker",
+    "region": "EUR",
+    "comment": "Played through a few levels.",
+    "author": "chriztr",
+    "shaderCount": 649,
+    "pipelineCount": 572
+  },
+  "0005000010138300": {
+    "name": "Donkey Kong Country Tropical Freeze",
+    "region": "EUR",
+    "comment": "Played a bit in the four first islands, entered all levels after island four",
+    "author": "chriztr",
+    "shaderCount": 1667,
+    "pipelineCount": 1247
+  },
+  "00050000101d6000": {
+    "name": "FAST Racing NEO",
+    "region": "EUR",
+    "comment": "Played a few cups.",
+    "author": "chriztr"
+  },
+  "000500001012f000": {
+    "name": "FAST Racing NEO",
+    "region": "USA",
+    "comment": "Played all cups",
+    "author": "Haruki1707",
+    "shaderCount": 1765,
+    "pipelineCount": 1989
+  },
+  "00050000101d0300": {
+    "name": "Fatal Frame / Project Zero Maiden of Black Waters",
+    "region": "EUR",
+    "comment": "Played through the four first drops in the game.",
+    "author": "chriztr"
+  },
+  "000500001014d200": {
+    "name": "Fatal Frame / Project Zero Maiden of Black Waters (零 ～濡鴉ノ巫女～)",
+    "region": "JPN",
+    "comment": "Played through the prolouge and the first drop so far",
+    "author": "chriztr",
+    "shaderCount": 547,
+    "pipelineCount": 526
+  },
+  "000500001010ed00": {
+    "name": "Mario Kart 8",
+    "region": "EUR",
+    "comment": "Played through every map including DLC",
+    "author": "chriztr",
+    "shaderCount": 10881,
+    "pipelineCount": 10375
+  },
+  "000500001010ec00": {
+    "name": "Mario Kart 8",
+    "region": "USA",
+    "comment": "Played all cups including DLC + looping title screen",
+    "author": "chriztr",
+    "shaderCount": 10913,
+    "pipelineCount": 10524
+  },
+  "0005000010101e00": {
+    "name": "New Super Mario Bros U",
+    "region": "EUR",
+    "comment": "Scrolled through the map and some",
+    "author": "chriztr",
+    "shaderCount": 516,
+    "pipelineCount": 750
+  },
+  "0005000010101d00": {
+    "name": "New Super Mario Bros U",
+    "region": "USA",
+    "comment": "Completed the whole game.",
+    "author": "Luka Doncic",
+    "shaderCount": 1100,
+    "pipelineCount": 2000
+  },
+  "000500001012be00": {
+    "name": "Pikmin 3",
+    "region": "EUR",
+    "comment": "Started a new game, three days of exploring ingame.",
+    "author": "chriztr",
+    "shaderCount": 1153,
+    "pipelineCount": 1647
+  },
+  "0005000010176a00": {
+    "name": "Splatoon",
+    "region": "EUR",
+    "comment": "Just loaded a new game and haven't played too much",
+    "author": "chriztr",
+    "shaderCount": 2061,
+    "pipelineCount": 2317
+  },
+  "0005000010145d00": {
+    "name": "Super Mario 3D World",
+    "region": "EUR",
+    "comment": "Played through all level except bonus stages.",
+    "author": "chriztr",
+    "shaderCount": 3846,
+    "pipelineCount": 4639
+  },
+  "0005000010145c00": {
+    "name": "Super Mario 3D World",
+    "region": "USA",
+    "comment": "Played all levels including bonus stages.",
+    "author": "Haruki1707",
+    "shaderCount": 3851,
+    "pipelineCount": 4784
+  },
+  "0005000010145000": {
+    "name": "Super Smash Bros U.",
+    "region": "EUR",
+    "comment": "I let the CPU play against each other on ever map available.",
+    "author": "chriztr"
+  },
+  "0005000010144F00": {
+    "name": "Super Smash Bros. U",
+    "region": "USA",
+    "comment": "I let the CPU play against each other on some maps",
+    "author": "chriztr",
+    "shaderCount": 2749,
+    "pipelineCount": 5005
+  },
+  "000500001010f800": {
+    "name": "Tekken Tag Tournament 2",
+    "region": "EUR",
+    "comment": "Let the game loop through some matches.",
+    "author": "chriztr",
+    "shaderCount": 910,
+    "pipelineCount": 1246
+  },
+  "0005000010110000": {
+    "name": "Tekken Tag Tournament 2",
+    "region": "USA",
+    "comment": "Let the game loop through some matches.",
+    "author": "chriztr",
+    "shaderCount": 1029,
+    "pipelineCount": 1367
+  },
+  "00050000101ed800": {
+    "name": "Tokyo Mirage Sessions #FE",
+    "region": "USA",
+    "comment": "Just started a new game. Unsure how much of it I'll play.",
+    "author": "chriztr",
+    "shaderCount": 743,
+    "pipelineCount": 1368
+  },
+  "00050000101c4c00": {
+    "name": "Xenoblade Chronicles X",
+    "region": "EUR",
+    "comment": "Chapter 1",
+    "author": "chriztr",
+    "shaderCount": 3609,
+    "pipelineCount": 7525
+  },
+  "0005000010184e00": {
+    "name": "Yoshi's Woolly World",
+    "region": "EUR",
+    "comment": "Gone through the maps in 1st, 2nd and 3rd world + some extra for now.",
+    "author": ["chriztr","Tomk007"],
+    "shaderCount": 3329,
+    "pipelineCount": 9375
+  },
+  "00050000101c9500": {
+    "name": "Zelda Breath of The Wild",
+    "region": "EUR",
+    "comment": "Casual playthrough with all divine beast and beaten Ganon and complete playthrough with all shrines and DLC.",
+    "author": "chriztr",
+    "shaderCount": 9276,
+    "pipelineCount": 54120
+  },
+  "00050000101c9300": {
+    "name": "Zelda Breath of The Wild",
+    "region": "JPN",
+    "author": "百万战神#2946",
+    "shaderCount": 9627,
+    "pipelineCount": 32609
+  },
+  "00050000101c9400": {
+    "name": "Zelda Breath of The Wild",
+    "region": "USA",
+    "comment": "Casual playthrough through all devine beast and beaten Ganon. Lacks some shrines for now",
+    "author": "chriztr",
+    "shaderCount": 8260,
+    "pipelineCount": 19789
+  },
+  "000500001019e600": {
+    "name": "Zelda Twilight Princess HD",
+    "region": "EUR",
+    "comment": "Completed the game with a causal playthough, watched the end credits as well.",
+    "author": "chriztr",
+    "shaderCount": 2560,
+    "pipelineCount": 1980
+  },
+  "0005000010143600": {
+    "name": "Zelda Wind Waker HD",
+    "region": "EUR",
+    "comment": "Almost completed the game. Currently at the end facing Ganon",
+    "author": "chriztr",
+    "shaderCount": 10941,
+    "pipelineCount": 11862
+  }
+}
