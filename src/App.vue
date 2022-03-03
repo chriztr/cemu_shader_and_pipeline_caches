@@ -20,7 +20,10 @@ export default {
       showEUR: true,
       showUSA: true,
       showJPN: true,
-      compressOutput: true
+      compressOutput: true,
+      sortBy: "name",
+      direction: false,
+      searchStr: ''
     }
   },
   methods: {
@@ -66,16 +69,21 @@ export default {
 <template>
   <h1>Unofficial caches for cemu 1.25 and newer</h1>
   <p>
-    A collection of shader and pipeline caches made by me and submitted by others<br>
+    A collection of shader and pipeline caches made by me and submitted by others.<br>
     Make sure the title ID match with your own. Most of my games are european copies.<br>
-    Submissions from other people might be different regions<br>
-    Shaders should work for both regions (you need to rename the cache to match your ID), however the pipelines doesn't<br>
-    <b>Make use of CTRL+F to easier search through the page</b><br>
+    Submissions from other people might be different regions.<br>
+    Shaders should work for both regions (you need to rename the cache to match your ID), however the pipelines won't.
   </p>
 
   
   <h3>How to install the caches</h3>
   <p>Extract the <code>.zip</code> file into your Cemu folder.</p>
+
+  <input 
+    type='text'
+    placeholder='Search'
+    v-model='searchStr'
+  />
 
   <h4 style="margin-bottom: .8em;">Regions</h4>
 
@@ -93,17 +101,25 @@ export default {
   <div id="list" class="tableContainer">
     <table>
       <tr>
-        <th>Name</th>
-        <th>Title ID</th>
+        <th>Name <i style="float: right; cursor: pointer;" v-on:click="(sortBy == 'name') ? direction = !direction : sortBy = 'name'" class="fas fa-sort"></i></th>
+        <th>Title ID <i style="float: right; cursor: pointer;" v-on:click="(sortBy == 'titleID') ? direction = !direction : sortBy = 'titleID'" class="fas fa-sort"></i></th>
         <th>Region</th>
         <th>Download</th>
       </tr>
       <tr v-for="title in shaderList.filter(x => 
-        (x.region == 'EUR') && showEUR ||
-        (x.region == 'USA') && showUSA ||
-        (x.region == 'JPN') && showJPN
+        (
+          (x.region == 'EUR') && showEUR ||
+          (x.region == 'USA') && showUSA ||
+          (x.region == 'JPN') && showJPN
+        ) && (
+          !searchStr ||
+          searchStr == '' ||
+          x.name.toLowerCase().replace(/[^a-z0-9]/g, '').includes(searchStr.toLowerCase().replace(/[^a-z0-9]/g, '')) ||
+          x.titleID.toLowerCase().replace(/[^a-z0-9]/g, '').includes(searchStr.toLowerCase().replace(/[^a-z0-9]/g, ''))
+        )
       ).sort(function(a,b) {
-        return (a.name < b.name) ? -1 : 1
+        var m = (direction) ? -1 : 1
+        return (a[sortBy] < b[sortBy]) ? -1*m : 1*m
       })" :key="title">
         <td class="tableMinWidth">{{title.name}}</td>
         <td class="centerText">{{title.titleID}}</td>
