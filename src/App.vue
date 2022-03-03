@@ -20,7 +20,9 @@ export default {
       showEUR: true,
       showUSA: true,
       showJPN: true,
-      compressOutput: true
+      compressOutput: true,
+      sortBy: "titleID",
+      direction: true,
     }
   },
   methods: {
@@ -93,8 +95,8 @@ export default {
   <div id="list" class="tableContainer">
     <table>
       <tr>
-        <th>Name</th>
-        <th>Title ID</th>
+        <th>Name <i style="float: right; cursor: pointer;" v-on:click="(sortBy == 'name') ? direction = !direction : sortBy = 'name'" class="fas fa-sort"></i></th>
+        <th>Title ID <i style="float: right; cursor: pointer;" v-on:click="(sortBy == 'titleID') ? direction = !direction : sortBy = 'titleID'" class="fas fa-sort"></i></th>
         <th>Region</th>
         <th>Download</th>
       </tr>
@@ -103,7 +105,8 @@ export default {
         (x.region == 'USA') && showUSA ||
         (x.region == 'JPN') && showJPN
       ).sort(function(a,b) {
-        return (a.name < b.name) ? -1 : 1
+        var m = (direction) ? -1 : 1
+        return (a[sortBy] < b[sortBy]) ? -1*m : 1*m
       })" :key="title">
         <td class="tableMinWidth">{{title.name}}</td>
         <td class="centerText">{{title.titleID}}</td>
