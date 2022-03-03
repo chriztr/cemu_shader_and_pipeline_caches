@@ -21,8 +21,9 @@ export default {
       showUSA: true,
       showJPN: true,
       compressOutput: true,
-      sortBy: "titleID",
-      direction: true,
+      sortBy: "name",
+      direction: false,
+      searchStr: ''
     }
   },
   methods: {
@@ -68,16 +69,21 @@ export default {
 <template>
   <h1>Unofficial caches for cemu 1.25 and newer</h1>
   <p>
-    A collection of shader and pipeline caches made by me and submitted by others<br>
+    A collection of shader and pipeline caches made by me and submitted by others.<br>
     Make sure the title ID match with your own. Most of my games are european copies.<br>
-    Submissions from other people might be different regions<br>
-    Shaders should work for both regions (you need to rename the cache to match your ID), however the pipelines doesn't<br>
-    <b>Make use of CTRL+F to easier search through the page</b><br>
+    Submissions from other people might be different regions.<br>
+    Shaders should work for both regions (you need to rename the cache to match your ID), however the pipelines won't.
   </p>
 
   
   <h3>How to install the caches</h3>
   <p>Extract the <code>.zip</code> file into your Cemu folder.</p>
+
+  <input 
+    type='text'
+    placeholder='Search'
+    v-model='searchStr'
+  />
 
   <h4 style="margin-bottom: .8em;">Regions</h4>
 
@@ -101,9 +107,16 @@ export default {
         <th>Download</th>
       </tr>
       <tr v-for="title in shaderList.filter(x => 
-        (x.region == 'EUR') && showEUR ||
-        (x.region == 'USA') && showUSA ||
-        (x.region == 'JPN') && showJPN
+        (
+          (x.region == 'EUR') && showEUR ||
+          (x.region == 'USA') && showUSA ||
+          (x.region == 'JPN') && showJPN
+        ) && (
+          !searchStr ||
+          searchStr == '' ||
+          x.name.toLowerCase().replace(/[^a-z0-9]/g, '').includes(searchStr.toLowerCase().replace(/[^a-z0-9]/g, '')) ||
+          x.titleID.toLowerCase().replace(/[^a-z0-9]/g, '').includes(searchStr.toLowerCase().replace(/[^a-z0-9]/g, ''))
+        )
       ).sort(function(a,b) {
         var m = (direction) ? -1 : 1
         return (a[sortBy] < b[sortBy]) ? -1*m : 1*m
