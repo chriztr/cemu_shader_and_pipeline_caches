@@ -88,24 +88,28 @@ export default {
   
   <h3>How to install the caches</h3>
   <p>Extract the <code>.zip</code> file into your Cemu folder.</p>
-
-  <input 
-    type='text'
-    placeholder='Search'
-    v-model='searchStr'
-  />
-
-  <h4 style="margin-bottom: .8em;">Regions</h4>
+  
+  <hr>
 
   <p>
-    <input type="checkbox" v-model="showEUR" id="showEURCheckbox">
-    <label for="showEURCheckbox" style="padding-right: .5em;">EUR</label>
-    <input type="checkbox" v-model="showUSA" id="showUSACheckbox">
-    <label for="showUSACheckbox" style="padding-right: .5em">USA</label>
-    <input type="checkbox" v-model="showJPN" id="showJPNCheckbox">
-    <label for="showJPNCheckbox">JPN</label>
+    <input 
+      class="search"
+      type='text'
+      placeholder='Search'
+      v-model='searchStr'
+    />
+    <span style="margin-left: .5em;">
+      <label><b>Regions:</b></label>
+      <input type="checkbox" v-model="showEUR" id="showEURCheckbox">
+      <label for="showEURCheckbox">EUR</label>
+      <input type="checkbox" v-model="showUSA" id="showUSACheckbox">
+      <label for="showUSACheckbox">USA</label>
+      <input type="checkbox" v-model="showJPN" id="showJPNCheckbox">
+      <label for="showJPNCheckbox">JPN</label>
+    </span>
 
-    <a style="float: right;" href="https://github.com/chriztr/cemu_shader_and_pipeline_caches/releases/latest/download/shaders.zip">Download all</a>
+    <a style="float: right; line-height: 2rem;" href="https://github.com/chriztr/cemu_shader_and_pipeline_caches/releases/latest/download/shaders.zip">Download all</a>
+
   </p>
 
   <div id="list" class="tableContainer">

@@ -1,3 +1,70 @@
+html {
+  color-scheme: light;
+}
+
+body {
+  background-color: #fff;
+  color: #2c3e50;
+}
+
+td, th {
+  border: 1px solid #dfe2e5;
+}
+
+tr:nth-child(even) {
+  background-color: #f3f4f5;
+}
+
+hr {
+  border: 1px solid #dfe2e5;
+}
+
+.search {
+  color: #2c3e50;
+  border: 1px solid #eaecef;
+  background: #fff url(/search.svg) 0.6rem 0.5rem no-repeat;
+  background-size: 1rem;
+}
+
+.chartDropdownBox {
+  background-color: #e7eaed;
+  color: #000;
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark !important;
+  }
+  
+  body {
+    background-color: #22272e !important;
+    color: #adbac7 !important;
+  }
+
+  td, th {
+    border: 1px solid #34404c !important;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #2b313a !important;
+  }
+
+  hr {
+    border: 1px solid #34404c;
+  }
+
+  .search {
+    color: #adbac7 !important;
+    border: 1px solid #3e4c5a !important;
+    background: #22272e url(/search.svg) 0.6rem 0.5rem no-repeat !important;
+    background-size: 1rem !important;
+  }
+
+  .chartDropdownBox {
+    background-color: #34404c !important;
+  }
+}
+
 body {
   font-family: arial, sans-serif;
   margin: auto;
@@ -11,13 +78,12 @@ table {
 }
 
 td, th {
-  border: 1px solid #ddd;
   text-align: left;
   padding: 8px;
 }
 
-tr:nth-child(even) {
-  background-color: #eee;
+label, input {
+  margin-right: .5em;
 }
 
 .centerText {
@@ -54,8 +120,6 @@ tr:nth-child(even) {
 
 .chartDropdownBox {
   position: absolute;
-  background-color: #efefef;
-  border-bottom-color: #ddd;
   text-align: left;
   border-radius: 0.25rem;
   white-space: nowrap;
@@ -122,4 +186,16 @@ tr:nth-child(even) {
   animation-duration: 1.5s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
+}
+
+.search {
+  cursor: text;
+  height: 2rem;
+  display: inline-block;
+  border-radius: 2rem;
+  font-size: .9rem;
+  line-height: 2rem;
+  padding: 0 0.5rem 0 2rem;
+  outline: 0;
+  transition: all ease .3s;
 }
