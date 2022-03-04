@@ -98,7 +98,7 @@ export default {
       placeholder='Search'
       v-model='searchStr'
     />
-    <span style="margin-left: .5em;">
+    <span class="regionCheckbox">
       <label><b>Regions:</b></label>
       <input type="checkbox" v-model="showEUR" id="showEURCheckbox">
       <label for="showEURCheckbox">EUR</label>
@@ -108,7 +108,7 @@ export default {
       <label for="showJPNCheckbox">JPN</label>
     </span>
 
-    <a style="float: right; line-height: 2rem;" href="https://github.com/chriztr/cemu_shader_and_pipeline_caches/releases/latest/download/shaders.zip">Download all</a>
+    <a class="downloadAllBtn" href="https://github.com/chriztr/cemu_shader_and_pipeline_caches/releases/latest/download/shaders.zip">Download all</a>
 
   </p>
 

@@ -50,7 +50,7 @@ hr {
   }
 
   hr {
-    border: 1px solid #34404c;
+    border: 1px solid #34404c !important;
   }
 
   .search {
@@ -61,6 +61,7 @@ hr {
   }
 
   .chartDropdownBox {
+    color: #adbac7 !important;
     background-color: #34404c !important;
   }
 }
@@ -198,4 +199,34 @@ label, input {
   padding: 0 0.5rem 0 2rem;
   outline: 0;
   transition: all ease .3s;
+}
+
+.regionCheckbox {
+  margin-left: .5em;
+}
+
+.downloadAllBtn {
+  float: right;
+  line-height: 2rem;
+}
+
+@media (max-width: 670px) {
+  .search {
+    float: right;
+  }
+  .regionCheckbox, .downloadAllBtn {
+    padding-top: .5em;
+    margin-left: 0;
+    display: block;
+    float: none;
+  }
+}
+
+@media (max-width: 560px) {
+  .search {
+    float: none;
+  }
+  .regionCheckbox {
+    padding-top: 1em;
+  }
 }
