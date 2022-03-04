@@ -27,6 +27,7 @@ jobs:
 
       - name: Zip shader caches
         run: |
+          mkdir public
           for file in individualShaderCache/*
           do
             titleID=$(echo $file | sed 's|.*/||g')
