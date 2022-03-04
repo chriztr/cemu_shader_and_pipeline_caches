@@ -1,14 +1,25 @@
 <script>
 import shaderListObj from '../shaders.json'
 
+function httpGetAsync(url, callback) {
+  var xmlHttp = new XMLHttpRequest();
+  xmlHttp.onreadystatechange = function() {
+    if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
+      callback(xmlHttp, url)
+    }
+  }
+  xmlHttp.open("GET", url, true)
+  xmlHttp.send(null)
+}
+
 var shaderList = []
 for (var i in shaderListObj) {
   var o = shaderListObj[i]
   o.titleID = i
-  if (!Array.isArray(o.author)) {
-    o.author = [o.author]
-  }
+
+  if (!Array.isArray(o.author)) o.author = [o.author]
   o.author = o.author.join(', ')
+
   o.downloading = false
   shaderList.push(o)
 }
@@ -62,7 +73,7 @@ export default {
           console.log('Saved!')
       });
     }
-  }
+  },
 }
 </script>
 
@@ -101,6 +112,7 @@ export default {
   <div id="list" class="tableContainer">
     <table>
       <tr>
+        <th></th>
         <th>Name <i style="float: right; cursor: pointer;" v-on:click="(sortBy == 'name') ? direction = !direction : sortBy = 'name'" class="fas fa-sort"></i></th>
         <th>Title ID <i style="float: right; cursor: pointer;" v-on:click="(sortBy == 'titleID') ? direction = !direction : sortBy = 'titleID'" class="fas fa-sort"></i></th>
         <th>Region</th>
@@ -121,6 +133,7 @@ export default {
         var m = (direction) ? -1 : 1
         return (a[sortBy] < b[sortBy]) ? -1*m : 1*m
       })" :key="title">
+        <td style="width: 2.4em; padding: 0;"><img :src="`icons/${title.titleID}.png`" onerror='this.src="icons/fallback.png"' style="width: 100%; vertical-align: middle;"></td>
         <td class="tableMinWidth">{{title.name}}</td>
         <td class="centerText">{{title.titleID}}</td>
         <td class="centerText">{{title.region}}</td>
