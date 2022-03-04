@@ -156,10 +156,10 @@
   "00050000101c4c00": {
     "name": "Xenoblade Chronicles X",
     "region": "EUR",
-    "comment": "Chapter 1",
+    "comment": "Chapter 2",
     "author": "chriztr",
-    "shaderCount": 3609,
-    "pipelineCount": 7525
+    "shaderCount": 3691,
+    "pipelineCount": 7924
   },
   "0005000010184e00": {
     "name": "Yoshi's Woolly World",
