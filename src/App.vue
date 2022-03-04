@@ -31,7 +31,6 @@ export default {
       showEUR: true,
       showUSA: true,
       showJPN: true,
-      compressOutput: true,
       sortBy: "name",
       direction: false,
       searchStr: ''
@@ -40,38 +39,37 @@ export default {
   methods: {
     downloadZip(titleID) {
       var zip = new JSZip()
-      var zipFileName = "shaders.zip"
       var shaderList = this.shaderList
-
-      function httpGet(url) {
-        let xmlHttpReq = new XMLHttpRequest();
-        xmlHttpReq.open("GET", url, false); 
-        xmlHttpReq.send(null);
-        return xmlHttpReq.responseText;
-      }
 
       const suffixArr = [
         '_vkpipeline',
         '_shaders'
       ]
-
-      suffixArr.map(function(x, index) {
+      .map(function(x, index) {
         var filename = `${titleID}${x}.bin`
         console.log(`${index}/${suffixArr.length} - ${filename}`)
-        zip.file(`shaderCache/transferable/${filename}`, httpGet(`dl/shaderCache/transferable/${filename}`), { binary: true })
+        
+        httpGetAsync(`dl/shaderCache/transferable/${filename}`, function (xmlHttp) {
+          var bin = xmlHttp.responseText
+          var url = xmlHttp.responseURL
+          var filename = url.split('/')[url.split('/').length - 1]
+          var titleID = filename.split('_')[0]
+          zip.file(`shaderCache/transferable/${filename}`, bin, { binary: true })
+
+          var fileCount = Object.keys(zip.folder('shaderCache/transferable').files).length - 2
+          if (fileCount == 2) {
+            var zipname = titleID
+            console.log(`Saving to "${zipname}.zip"...`)
+            
+            zip.generateAsync({ type:"blob", compression: 'DEFLATE' })
+            .then(function (blob) {
+                saveAs(blob, `${zipname}.zip`)
+                shaderList.filter(x => x.titleID == titleID)[0].downloading = false
+                console.log('Saved!')
+            });
+          }
+        })
       })
-
-      var filename = titleID
-      console.log(`Saving to "${filename}.zip"...`)
-
-      var compression = this.compressOutput ? 'DEFLATE' : 'STORE'
-
-      zip.generateAsync({ type:"blob", compression: compression })
-      .then(function (blob) {
-          saveAs(blob, `${filename}.zip`)
-          shaderList.filter(x => x.titleID == titleID)[0].downloading = false
-          console.log('Saved!')
-      });
     }
   },
 }
@@ -156,11 +154,8 @@ export default {
     </table>
   </div>
 
-  <p>
-    <input type="checkbox" v-model="compressOutput" id="compressOutputCheckbox">
-    <label for="compressOutputCheckbox">Compress downloads</label>
-  </p>
-
+  <p></p>
+  
 </template>
 
 <style>
