@@ -173,7 +173,7 @@
     "name": "Zelda Breath of The Wild",
     "region": "EUR",
     "comment": "Casual playthrough with all divine beast and beaten Ganon and complete playthrough with all shrines and DLC.",
-    "author": "chriztr",
+    "author": ["chriztr","Fruscho#8918"],
     "shaderCount": 9276,
     "pipelineCount": 54120
   },
