@@ -31,11 +31,11 @@ jobs:
           do
             echo $file
             if [[ $file != shaders/* && $file != pipelines/* ]]; then
-              echo "This modified file is not in shaders or pipelines."
               echo "::set-output name=run_job::false"
-              break
             else
+              echo "This modified file is in shaders or pipelines."
               echo "::set-output name=run_job::true"
+              break
             fi
           done < files.txt
           
