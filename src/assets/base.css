@@ -31,7 +31,8 @@ hr {
   color: #000;
 }
 
-.footer {
+footer {
+  border-top: 1px solid #dfe2e5;
   background-color: #f3f4f5;
 }
 
@@ -69,7 +70,8 @@ hr {
     background-color: #34404c !important;
   }
 
-  .footer {
+  footer {
+    border-top: 1px solid #34404c !important;
     background-color: #2b313a !important;
   }
 }
@@ -99,7 +101,7 @@ label, input {
   width: 70%;
 }
 
-.footer {
+footer {
   padding: .7em 2em;
   margin: auto;
 }
