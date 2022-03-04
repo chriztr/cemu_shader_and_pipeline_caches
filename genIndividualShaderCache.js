@@ -18,10 +18,17 @@ function mkdir(p) {
   if (!fs.existsSync(p)) fs.mkdirSync(p)
 }
 
-mkdir('shaderCache')
-mkdir('shaderCache/transferable')
+mkdir('individualShaderCache')
 
 fileArr = [...getAllFiles('shaders'), ...getAllFiles('pipelines')]
 .map(function(f, index) {
-  fs.readFile(f, (err, data) => fs.writeFile(`shaderCache/transferable/${path.win32.basename(f)}`, data, (err) => { if (err) console.log(err) }))
+  fs.readFile(f, (err, data) => {
+    var basename = path.win32.basename(f),
+        titleID = basename.split('_')[0]
+
+    mkdir(`individualShaderCache/${titleID}`)
+    mkdir(`individualShaderCache/${titleID}/shaderCache`)
+    mkdir(`individualShaderCache/${titleID}/shaderCache/transferable`)
+    fs.writeFile(`individualShaderCache/${titleID}/shaderCache/transferable/${basename}`, data, (err) => { if (err) console.log(err) });
+  })
 })

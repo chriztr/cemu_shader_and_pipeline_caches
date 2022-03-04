@@ -19,8 +19,6 @@ for (var i in shaderListObj) {
 
   if (!Array.isArray(o.author)) o.author = [o.author]
   o.author = o.author.join(', ')
-
-  o.downloading = false
   shaderList.push(o)
 }
 
@@ -35,44 +33,7 @@ export default {
       direction: false,
       searchStr: ''
     }
-  },
-  methods: {
-    downloadZip(titleID) {
-      var zip = new JSZip()
-      var shaderList = this.shaderList
-
-      const suffixArr = [
-        '_vkpipeline',
-        '_shaders'
-      ]
-
-      suffixArr.map(function(x, index) {
-        var filename = `${titleID}${x}.bin`
-        console.log(`${index}/${suffixArr.length} - ${filename}`)
-        
-        httpGetAsync(`dl/shaderCache/transferable/${filename}`, function (xmlHttp) {
-          var bin = xmlHttp.responseText
-          var url = xmlHttp.responseURL
-          var filename = url.split('/')[url.split('/').length - 1]
-          var titleID = filename.split('_')[0]
-          zip.file(`shaderCache/transferable/${filename}`, bin, { binary: true })
-
-          var fileCount = Object.keys(zip.folder('shaderCache/transferable').files).length - 2
-          if (fileCount == 2) {
-            var zipname = titleID
-            console.log(`Saving to "${zipname}.zip"...`)
-            
-            zip.generateAsync({ type:"blob", compression: 'DEFLATE' })
-            .then(function (blob) {
-                saveAs(blob, `${zipname}.zip`)
-                shaderList.filter(x => x.titleID == titleID)[0].downloading = false
-                console.log('Saved!')
-            });
-          }
-        })
-      })
-    }
-  },
+  }
 }
 </script>
 
@@ -143,10 +104,10 @@ export default {
           <td class="tableMinWidth">{{title.name}}</td>
           <td class="centerText">{{title.titleID}}</td>
           <td class="centerText">{{title.region}}</td>
-          <td class="centerText" v-on:click="shaderList.filter(x => x.titleID == title.titleID)[0].downloading = true; downloadZip(title.titleID)">
+          <td class="centerText">
             <div class="chartDropdownWrapper">
               <div class="chartDropdown">
-                <i :class="`fas fa-${title.downloading ? 'spinner spin' : 'download'}`" :id="`dl-${title.titleID}`"></i>
+                <a :href="`${title.titleID}.zip`"><i class="fas fa-download"></i></a>
               </div>
               <div class="chartDropdownBox opaqueHover">
                 <ul>

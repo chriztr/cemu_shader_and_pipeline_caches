@@ -26,6 +26,7 @@ coverage
 *.sln
 *.sw?
 
+individualShaderCache
 shaderCache
 public/dl
 public/icons

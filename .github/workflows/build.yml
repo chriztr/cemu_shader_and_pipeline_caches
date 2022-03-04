@@ -22,6 +22,19 @@ jobs:
           # choose node.js version to use
           node-version: '16'
 
+      - name: Grab individual shader caches
+        run: node genIndividualShaderCache.js
+
+      - name: Zip shader caches
+        run: |
+          for file in individualShaderCache/*
+          do
+            titleID=$(echo $file | sed 's|.*/||g')
+            cd individualShaderCache/$titleID
+            zip -q -r -9 "../../public/${titleID}.zip" shaderCache
+            cd ../../
+          done
+
       - name: Get yarn cache directory path
         id: yarn-cache-dir-path
         run: echo "::set-output name=dir::$(yarn cache dir)"
