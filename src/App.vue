@@ -85,7 +85,6 @@ export default {
       Submissions from other people might be different regions.<br>
       Shaders should work for both regions (you need to rename the cache to match your ID), however the pipelines won't.
     </p>
-
     
     <h3>How to install the caches</h3>
     <p>Extract the <code>.zip</code> file into your Cemu folder.</p>
@@ -109,7 +108,10 @@ export default {
         <label for="showJPNCheckbox">JPN</label>
       </span>
 
-      <a class="downloadAllBtn" href="https://github.com/chriztr/cemu_shader_and_pipeline_caches/releases/latest/download/shaders.zip">Download all</a>
+      <span class="downloadAllBtn">
+        <a href="https://github.com/chriztr/cemu_shader_and_pipeline_caches" style="margin-right: .5em" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://github.com/chriztr/cemu_shader_and_pipeline_caches/releases/latest/download/shaders.zip">Download all</a>
+      </span>
 
     </p>
 
