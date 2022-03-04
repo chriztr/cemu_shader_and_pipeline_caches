@@ -30,7 +30,7 @@ jobs:
           while IFS= read -r file
           do
             echo $file
-            if [[ $file != shaders/* || $file != pipelines/* ]]; then
+            if [[ $file != shaders/* && $file != pipelines/* ]]; then
               echo "This modified file is not in shaders or pipelines."
               echo "::set-output name=run_job::false"
               break
