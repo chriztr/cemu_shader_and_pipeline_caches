@@ -1,14 +1,25 @@
 <script>
 import shaderListObj from '../shaders.json'
 
+function httpGetAsync(url, callback) {
+  var xmlHttp = new XMLHttpRequest();
+  xmlHttp.onreadystatechange = function() {
+    if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
+      callback(xmlHttp, url)
+    }
+  }
+  xmlHttp.open("GET", url, true)
+  xmlHttp.send(null)
+}
+
 var shaderList = []
 for (var i in shaderListObj) {
   var o = shaderListObj[i]
   o.titleID = i
-  if (!Array.isArray(o.author)) {
-    o.author = [o.author]
-  }
+
+  if (!Array.isArray(o.author)) o.author = [o.author]
   o.author = o.author.join(', ')
+
   o.downloading = false
   shaderList.push(o)
 }
@@ -20,7 +31,6 @@ export default {
       showEUR: true,
       showUSA: true,
       showJPN: true,
-      compressOutput: true,
       sortBy: "name",
       direction: false,
       searchStr: ''
@@ -29,15 +39,7 @@ export default {
   methods: {
     downloadZip(titleID) {
       var zip = new JSZip()
-      var zipFileName = "shaders.zip"
       var shaderList = this.shaderList
-
-      function httpGet(url) {
-        let xmlHttpReq = new XMLHttpRequest();
-        xmlHttpReq.open("GET", url, false); 
-        xmlHttpReq.send(null);
-        return xmlHttpReq.responseText;
-      }
 
       const suffixArr = [
         '_vkpipeline',
@@ -47,107 +49,127 @@ export default {
       suffixArr.map(function(x, index) {
         var filename = `${titleID}${x}.bin`
         console.log(`${index}/${suffixArr.length} - ${filename}`)
-        zip.file(`shaderCache/transferable/${filename}`, httpGet(`dl/shaderCache/transferable/${filename}`), { binary: true })
+        
+        httpGetAsync(`dl/shaderCache/transferable/${filename}`, function (xmlHttp) {
+          var bin = xmlHttp.responseText
+          var url = xmlHttp.responseURL
+          var filename = url.split('/')[url.split('/').length - 1]
+          var titleID = filename.split('_')[0]
+          zip.file(`shaderCache/transferable/${filename}`, bin, { binary: true })
+
+          var fileCount = Object.keys(zip.folder('shaderCache/transferable').files).length - 2
+          if (fileCount == 2) {
+            var zipname = titleID
+            console.log(`Saving to "${zipname}.zip"...`)
+            
+            zip.generateAsync({ type:"blob", compression: 'DEFLATE' })
+            .then(function (blob) {
+                saveAs(blob, `${zipname}.zip`)
+                shaderList.filter(x => x.titleID == titleID)[0].downloading = false
+                console.log('Saved!')
+            });
+          }
+        })
       })
-
-      var filename = titleID
-      console.log(`Saving to "${filename}.zip"...`)
-
-      var compression = this.compressOutput ? 'DEFLATE' : 'STORE'
-
-      zip.generateAsync({ type:"blob", compression: compression })
-      .then(function (blob) {
-          saveAs(blob, `${filename}.zip`)
-          shaderList.filter(x => x.titleID == titleID)[0].downloading = false
-          console.log('Saved!')
-      });
     }
-  }
+  },
 }
 </script>
 
 <template>
-  <h1>Unofficial caches for cemu 1.25 and newer</h1>
-  <p>
-    A collection of shader and pipeline caches made by me and submitted by others.<br>
-    Make sure the title ID match with your own. Most of my games are european copies.<br>
-    Submissions from other people might be different regions.<br>
-    Shaders should work for both regions (you need to rename the cache to match your ID), however the pipelines won't.
-  </p>
+  <div class="main">
+    <h1>Unofficial caches for cemu 1.25 and newer</h1>
+    <p>
+      A collection of shader and pipeline caches made by me and submitted by others.<br>
+      Make sure the title ID match with your own. Most of my games are european copies.<br>
+      Submissions from other people might be different regions.<br>
+      Shaders should work for both regions (you need to rename the cache to match your ID), however the pipelines won't.
+    </p>
+    
+    <h3>How to install the caches</h3>
+    <p>Extract the <code>.zip</code> file into your Cemu folder.</p>
+    
+    <hr>
 
-  
-  <h3>How to install the caches</h3>
-  <p>Extract the <code>.zip</code> file into your Cemu folder.</p>
+    <p>
+      <input 
+        class="search"
+        type='text'
+        placeholder='Search'
+        v-model='searchStr'
+      />
+      <span class="regionCheckbox">
+        <label><b>Regions:</b></label>
+        <input type="checkbox" v-model="showEUR" id="showEURCheckbox">
+        <label for="showEURCheckbox">EUR</label>
+        <input type="checkbox" v-model="showUSA" id="showUSACheckbox">
+        <label for="showUSACheckbox">USA</label>
+        <input type="checkbox" v-model="showJPN" id="showJPNCheckbox">
+        <label for="showJPNCheckbox">JPN</label>
+      </span>
 
-  <input 
-    type='text'
-    placeholder='Search'
-    v-model='searchStr'
-  />
+      <span class="downloadAllBtn">
+        <a href="https://github.com/chriztr/cemu_shader_and_pipeline_caches" style="margin-right: .5em" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://github.com/chriztr/cemu_shader_and_pipeline_caches/releases/latest/download/shaders.zip">Download all</a>
+      </span>
 
-  <h4 style="margin-bottom: .8em;">Regions</h4>
+    </p>
 
-  <p>
-    <input type="checkbox" v-model="showEUR" id="showEURCheckbox">
-    <label for="showEURCheckbox" style="padding-right: .5em;">EUR</label>
-    <input type="checkbox" v-model="showUSA" id="showUSACheckbox">
-    <label for="showUSACheckbox" style="padding-right: .5em">USA</label>
-    <input type="checkbox" v-model="showJPN" id="showJPNCheckbox">
-    <label for="showJPNCheckbox">JPN</label>
-
-    <a style="float: right;" href="https://github.com/chriztr/cemu_shader_and_pipeline_caches/releases/latest/download/shaders.zip">Download all</a>
-  </p>
-
-  <div id="list" class="tableContainer">
-    <table>
-      <tr>
-        <th>Name <i style="float: right; cursor: pointer;" v-on:click="(sortBy == 'name') ? direction = !direction : sortBy = 'name'" class="fas fa-sort"></i></th>
-        <th>Title ID <i style="float: right; cursor: pointer;" v-on:click="(sortBy == 'titleID') ? direction = !direction : sortBy = 'titleID'" class="fas fa-sort"></i></th>
-        <th>Region</th>
-        <th>Download</th>
-      </tr>
-      <tr v-for="title in shaderList.filter(x => 
-        (
-          (x.region == 'EUR') && showEUR ||
-          (x.region == 'USA') && showUSA ||
-          (x.region == 'JPN') && showJPN
-        ) && (
-          !searchStr ||
-          searchStr == '' ||
-          x.name.toLowerCase().replace(/[^a-z0-9]/g, '').includes(searchStr.toLowerCase().replace(/[^a-z0-9]/g, '')) ||
-          x.titleID.toLowerCase().replace(/[^a-z0-9]/g, '').includes(searchStr.toLowerCase().replace(/[^a-z0-9]/g, ''))
-        )
-      ).sort(function(a,b) {
-        var m = (direction) ? -1 : 1
-        return (a[sortBy] < b[sortBy]) ? -1*m : 1*m
-      })" :key="title">
-        <td class="tableMinWidth">{{title.name}}</td>
-        <td class="centerText">{{title.titleID}}</td>
-        <td class="centerText">{{title.region}}</td>
-        <td class="centerText" v-on:click="shaderList.filter(x => x.titleID == title.titleID)[0].downloading = true; downloadZip(title.titleID)">
-          <div class="chartDropdownWrapper">
-            <div class="chartDropdown">
-              <i :class="`fas fa-${title.downloading ? 'spinner' : 'download'}`" :id="`dl-${title.titleID}`"></i>
+    <div id="list" class="tableContainer">
+      <table>
+        <tr>
+          <th></th>
+          <th>Name <i style="float: right; cursor: pointer;" v-on:click="(sortBy == 'name') ? direction = !direction : sortBy = 'name'" class="fas fa-sort"></i></th>
+          <th>Title ID <i style="float: right; cursor: pointer;" v-on:click="(sortBy == 'titleID') ? direction = !direction : sortBy = 'titleID'" class="fas fa-sort"></i></th>
+          <th>Region</th>
+          <th>Download</th>
+        </tr>
+        <tr v-for="title in shaderList.filter(x => 
+          (
+            (x.region == 'EUR') && showEUR ||
+            (x.region == 'USA') && showUSA ||
+            (x.region == 'JPN') && showJPN
+          ) && (
+            !searchStr ||
+            searchStr == '' ||
+            x.name.toLowerCase().replace(/[^a-z0-9]/g, '').includes(searchStr.toLowerCase().replace(/[^a-z0-9]/g, '')) ||
+            x.titleID.toLowerCase().replace(/[^a-z0-9]/g, '').includes(searchStr.toLowerCase().replace(/[^a-z0-9]/g, ''))
+          )
+        ).sort(function(a,b) {
+          var m = (direction) ? -1 : 1
+          return (a[sortBy] < b[sortBy]) ? -1*m : 1*m
+        })" :key="title">
+          <td style="width: 2.4em; padding: 0;"><img :src="`icons/${title.titleID}.png`" onerror='this.src="icons/fallback.png"' style="width: 2.4em; vertical-align: middle;"></td>
+          <td class="tableMinWidth">{{title.name}}</td>
+          <td class="centerText">{{title.titleID}}</td>
+          <td class="centerText">{{title.region}}</td>
+          <td class="centerText" v-on:click="shaderList.filter(x => x.titleID == title.titleID)[0].downloading = true; downloadZip(title.titleID)">
+            <div class="chartDropdownWrapper">
+              <div class="chartDropdown">
+                <i :class="`fas fa-${title.downloading ? 'spinner spin' : 'download'}`" :id="`dl-${title.titleID}`"></i>
+              </div>
+              <div class="chartDropdownBox opaqueHover">
+                <ul>
+                  <li v-if="title.comment">{{title.comment}}</li>
+                  <li v-if="title.author">Made by: {{title.author}}</li>
+                  <li v-if="title.shaderCount">Shaders: {{title.shaderCount}}</li>
+                  <li v-if="title.pipelineCount">Pipelines: {{title.pipelineCount}}</li>
+                </ul>
+              </div>
             </div>
-            <div class="chartDropdownBox opaqueHover">
-              <ul>
-                <li v-if="title.comment">{{title.comment}}</li>
-                <li v-if="title.author">Made by: {{title.author}}</li>
-                <li v-if="title.shaderCount">Shaders: {{title.shaderCount}}</li>
-                <li v-if="title.pipelineCount">Pipelines: {{title.pipelineCount}}</li>
-              </ul>
-            </div>
-          </div>
-        </td>
-      </tr>
-    </table>
+          </td>
+        </tr>
+      </table>
+    </div>
   </div>
 
-  <p>
-    <input type="checkbox" v-model="compressOutput" id="compressOutputCheckbox">
-    <label for="compressOutputCheckbox">Compress downloads</label>
-  </p>
+  <p></p>
 
+  <footer>
+    <p>Created by <a href="https://github.com/chriztr" target="_blank">chriztr</a> and <a href="https://github.com/emiyl" target="_blank">emiyl</a>.</p>
+    <p>If you need further help, ask on the official Cemu <a href="https://discord.gg/5psYsup" target="_blank">Discord Server</a> for assistance.</p>
+  </footer>
+  
 </template>
 
 <style>

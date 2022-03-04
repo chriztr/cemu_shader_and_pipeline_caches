@@ -43,6 +43,12 @@ mkdir('public/dl/shaderCache')
 mkdir('public/dl/shaderCache/transferable')
 
 fileArr = [...getAllFiles('shaders'), ...getAllFiles('pipelines')]
-.map(function(f, index) {
+.map(function(f) {
   fs.readFile(f, (err, data) => fs.writeFileSync(`public/dl/shaderCache/transferable/${path.win32.basename(f)}`, data))
+})
+
+mkdir('public/icons')
+iconArr = getAllFiles('icons')
+.map(function(f) {
+  fs.readFile(f, (err, data) => fs.writeFileSync(`public/icons/${path.win32.basename(f)}`, data))
 })
