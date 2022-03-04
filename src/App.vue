@@ -45,7 +45,8 @@ export default {
         '_vkpipeline',
         '_shaders'
       ]
-      .map(function(x, index) {
+
+      suffixArr.map(function(x, index) {
         var filename = `${titleID}${x}.bin`
         console.log(`${index}/${suffixArr.length} - ${filename}`)
         
@@ -138,7 +139,7 @@ export default {
         <td class="centerText" v-on:click="shaderList.filter(x => x.titleID == title.titleID)[0].downloading = true; downloadZip(title.titleID)">
           <div class="chartDropdownWrapper">
             <div class="chartDropdown">
-              <i :class="`fas fa-${title.downloading ? 'spinner' : 'download'}`" :id="`dl-${title.titleID}`"></i>
+              <i :class="`fas fa-${title.downloading ? 'spinner spin' : 'download'}`" :id="`dl-${title.titleID}`"></i>
             </div>
             <div class="chartDropdownBox opaqueHover">
               <ul>
