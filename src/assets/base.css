@@ -22,7 +22,7 @@ hr {
 .search {
   color: #2c3e50;
   border: 1px solid #eaecef;
-  background: #fff url(/search.svg) 0.6rem 0.5rem no-repeat;
+  background: #fff url(@/assets/search.svg) 0.6rem 0.5rem no-repeat;
   background-size: 1rem;
 }
 
@@ -61,7 +61,7 @@ footer {
   .search {
     color: #adbac7 !important;
     border: 1px solid #3e4c5a !important;
-    background: #22272e url(/search.svg) 0.6rem 0.5rem no-repeat !important;
+    background: #22272e url(@/assets/search.svg) 0.6rem 0.5rem no-repeat !important;
     background-size: 1rem !important;
   }
 
