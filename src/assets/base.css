@@ -31,6 +31,10 @@ hr {
   color: #000;
 }
 
+.footer {
+  background-color: #f3f4f5;
+}
+
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark !important;
@@ -64,12 +68,15 @@ hr {
     color: #adbac7 !important;
     background-color: #34404c !important;
   }
+
+  .footer {
+    background-color: #2b313a !important;
+  }
 }
 
 body {
+  margin: 0;
   font-family: arial, sans-serif;
-  margin: auto;
-  width: 70%;
 }
 
 table {
@@ -87,12 +94,22 @@ label, input {
   margin-right: .5em;
 }
 
+.main {
+  margin: auto;
+  width: 70%;
+}
+
+.footer {
+  padding: .7em 2em;
+  margin: auto;
+}
+
 .centerText {
   text-align: center;
 }
 
 @media (max-width: 1100px) {
-  body {
+  .main {
     width: 90%;
   }
 

@@ -77,89 +77,96 @@ export default {
 </script>
 
 <template>
-  <h1>Unofficial caches for cemu 1.25 and newer</h1>
-  <p>
-    A collection of shader and pipeline caches made by me and submitted by others.<br>
-    Make sure the title ID match with your own. Most of my games are european copies.<br>
-    Submissions from other people might be different regions.<br>
-    Shaders should work for both regions (you need to rename the cache to match your ID), however the pipelines won't.
-  </p>
+  <div class="main">
+    <h1>Unofficial caches for cemu 1.25 and newer</h1>
+    <p>
+      A collection of shader and pipeline caches made by me and submitted by others.<br>
+      Make sure the title ID match with your own. Most of my games are european copies.<br>
+      Submissions from other people might be different regions.<br>
+      Shaders should work for both regions (you need to rename the cache to match your ID), however the pipelines won't.
+    </p>
 
-  
-  <h3>How to install the caches</h3>
-  <p>Extract the <code>.zip</code> file into your Cemu folder.</p>
-  
-  <hr>
+    
+    <h3>How to install the caches</h3>
+    <p>Extract the <code>.zip</code> file into your Cemu folder.</p>
+    
+    <hr>
 
-  <p>
-    <input 
-      class="search"
-      type='text'
-      placeholder='Search'
-      v-model='searchStr'
-    />
-    <span class="regionCheckbox">
-      <label><b>Regions:</b></label>
-      <input type="checkbox" v-model="showEUR" id="showEURCheckbox">
-      <label for="showEURCheckbox">EUR</label>
-      <input type="checkbox" v-model="showUSA" id="showUSACheckbox">
-      <label for="showUSACheckbox">USA</label>
-      <input type="checkbox" v-model="showJPN" id="showJPNCheckbox">
-      <label for="showJPNCheckbox">JPN</label>
-    </span>
+    <p>
+      <input 
+        class="search"
+        type='text'
+        placeholder='Search'
+        v-model='searchStr'
+      />
+      <span class="regionCheckbox">
+        <label><b>Regions:</b></label>
+        <input type="checkbox" v-model="showEUR" id="showEURCheckbox">
+        <label for="showEURCheckbox">EUR</label>
+        <input type="checkbox" v-model="showUSA" id="showUSACheckbox">
+        <label for="showUSACheckbox">USA</label>
+        <input type="checkbox" v-model="showJPN" id="showJPNCheckbox">
+        <label for="showJPNCheckbox">JPN</label>
+      </span>
 
-    <a class="downloadAllBtn" href="https://github.com/chriztr/cemu_shader_and_pipeline_caches/releases/latest/download/shaders.zip">Download all</a>
+      <a class="downloadAllBtn" href="https://github.com/chriztr/cemu_shader_and_pipeline_caches/releases/latest/download/shaders.zip">Download all</a>
 
-  </p>
+    </p>
 
-  <div id="list" class="tableContainer">
-    <table>
-      <tr>
-        <th></th>
-        <th>Name <i style="float: right; cursor: pointer;" v-on:click="(sortBy == 'name') ? direction = !direction : sortBy = 'name'" class="fas fa-sort"></i></th>
-        <th>Title ID <i style="float: right; cursor: pointer;" v-on:click="(sortBy == 'titleID') ? direction = !direction : sortBy = 'titleID'" class="fas fa-sort"></i></th>
-        <th>Region</th>
-        <th>Download</th>
-      </tr>
-      <tr v-for="title in shaderList.filter(x => 
-        (
-          (x.region == 'EUR') && showEUR ||
-          (x.region == 'USA') && showUSA ||
-          (x.region == 'JPN') && showJPN
-        ) && (
-          !searchStr ||
-          searchStr == '' ||
-          x.name.toLowerCase().replace(/[^a-z0-9]/g, '').includes(searchStr.toLowerCase().replace(/[^a-z0-9]/g, '')) ||
-          x.titleID.toLowerCase().replace(/[^a-z0-9]/g, '').includes(searchStr.toLowerCase().replace(/[^a-z0-9]/g, ''))
-        )
-      ).sort(function(a,b) {
-        var m = (direction) ? -1 : 1
-        return (a[sortBy] < b[sortBy]) ? -1*m : 1*m
-      })" :key="title">
-        <td style="width: 2.4em; padding: 0;"><img :src="`icons/${title.titleID}.png`" onerror='this.src="icons/fallback.png"' style="width: 2.4em; vertical-align: middle;"></td>
-        <td class="tableMinWidth">{{title.name}}</td>
-        <td class="centerText">{{title.titleID}}</td>
-        <td class="centerText">{{title.region}}</td>
-        <td class="centerText" v-on:click="shaderList.filter(x => x.titleID == title.titleID)[0].downloading = true; downloadZip(title.titleID)">
-          <div class="chartDropdownWrapper">
-            <div class="chartDropdown">
-              <i :class="`fas fa-${title.downloading ? 'spinner spin' : 'download'}`" :id="`dl-${title.titleID}`"></i>
+    <div id="list" class="tableContainer">
+      <table>
+        <tr>
+          <th></th>
+          <th>Name <i style="float: right; cursor: pointer;" v-on:click="(sortBy == 'name') ? direction = !direction : sortBy = 'name'" class="fas fa-sort"></i></th>
+          <th>Title ID <i style="float: right; cursor: pointer;" v-on:click="(sortBy == 'titleID') ? direction = !direction : sortBy = 'titleID'" class="fas fa-sort"></i></th>
+          <th>Region</th>
+          <th>Download</th>
+        </tr>
+        <tr v-for="title in shaderList.filter(x => 
+          (
+            (x.region == 'EUR') && showEUR ||
+            (x.region == 'USA') && showUSA ||
+            (x.region == 'JPN') && showJPN
+          ) && (
+            !searchStr ||
+            searchStr == '' ||
+            x.name.toLowerCase().replace(/[^a-z0-9]/g, '').includes(searchStr.toLowerCase().replace(/[^a-z0-9]/g, '')) ||
+            x.titleID.toLowerCase().replace(/[^a-z0-9]/g, '').includes(searchStr.toLowerCase().replace(/[^a-z0-9]/g, ''))
+          )
+        ).sort(function(a,b) {
+          var m = (direction) ? -1 : 1
+          return (a[sortBy] < b[sortBy]) ? -1*m : 1*m
+        })" :key="title">
+          <td style="width: 2.4em; padding: 0;"><img :src="`icons/${title.titleID}.png`" onerror='this.src="icons/fallback.png"' style="width: 2.4em; vertical-align: middle;"></td>
+          <td class="tableMinWidth">{{title.name}}</td>
+          <td class="centerText">{{title.titleID}}</td>
+          <td class="centerText">{{title.region}}</td>
+          <td class="centerText" v-on:click="shaderList.filter(x => x.titleID == title.titleID)[0].downloading = true; downloadZip(title.titleID)">
+            <div class="chartDropdownWrapper">
+              <div class="chartDropdown">
+                <i :class="`fas fa-${title.downloading ? 'spinner spin' : 'download'}`" :id="`dl-${title.titleID}`"></i>
+              </div>
+              <div class="chartDropdownBox opaqueHover">
+                <ul>
+                  <li v-if="title.comment">{{title.comment}}</li>
+                  <li v-if="title.author">Made by: {{title.author}}</li>
+                  <li v-if="title.shaderCount">Shaders: {{title.shaderCount}}</li>
+                  <li v-if="title.pipelineCount">Pipelines: {{title.pipelineCount}}</li>
+                </ul>
+              </div>
             </div>
-            <div class="chartDropdownBox opaqueHover">
-              <ul>
-                <li v-if="title.comment">{{title.comment}}</li>
-                <li v-if="title.author">Made by: {{title.author}}</li>
-                <li v-if="title.shaderCount">Shaders: {{title.shaderCount}}</li>
-                <li v-if="title.pipelineCount">Pipelines: {{title.pipelineCount}}</li>
-              </ul>
-            </div>
-          </div>
-        </td>
-      </tr>
-    </table>
+          </td>
+        </tr>
+      </table>
+    </div>
   </div>
 
   <p></p>
+
+  <div class="footer">
+    <p>Created by <a href="https://github.com/chriztr" target="_blank">chriztr</a> and <a href="https://github.com/emiyl" target="_blank">emiyl</a>.</p>
+    <p>If you need further help, ask on the official Cemu <a href="https://discord.gg/5psYsup" target="_blank">Discord Server</a> for assistance.</p>
+  </div>
   
 </template>
 
