@@ -133,7 +133,7 @@ export default {
         var m = (direction) ? -1 : 1
         return (a[sortBy] < b[sortBy]) ? -1*m : 1*m
       })" :key="title">
-        <td style="width: 2.4em; padding: 0;"><img :src="`icons/${title.titleID}.png`" onerror='this.src="icons/fallback.png"' style="width: 100%; vertical-align: middle;"></td>
+        <td style="width: 2.4em; padding: 0;"><img :src="`icons/${title.titleID}.png`" onerror='this.src="icons/fallback.png"' style="width: 2.4em; vertical-align: middle;"></td>
         <td class="tableMinWidth">{{title.name}}</td>
         <td class="centerText">{{title.titleID}}</td>
         <td class="centerText">{{title.region}}</td>
