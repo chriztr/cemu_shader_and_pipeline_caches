@@ -121,6 +121,5 @@ tr:nth-child(even) {
   animation-name: spinning;
   animation-duration: 1.5s;
   animation-iteration-count: infinite;
-  /* linear | ease | ease-in | ease-out | ease-in-out */
   animation-timing-function: linear;
 }
