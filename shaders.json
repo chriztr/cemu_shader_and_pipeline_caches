@@ -94,10 +94,10 @@
   "0005000010176a00": {
     "name": "Splatoon",
     "region": "EUR",
-    "comment": "Just loaded a new game and haven't played too much",
-    "author": "chriztr",
-    "shaderCount": 2583,
-    "pipelineCount": 2997
+    "comment": "All of the multiplayer stages' shaders have been cached and a majority of the hero mode's stages have also been cached",
+    "author": ["chriztr","Octo#4533"],
+    "shaderCount": 6642,
+    "pipelineCount": 12233
   },
   "0005000010145d00": {
     "name": "Super Mario 3D World",
