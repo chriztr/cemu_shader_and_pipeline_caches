@@ -119,7 +119,9 @@
     "name": "Super Smash Bros. U",
     "region": "EUR",
     "comment": "I let the CPU play against each other on ever map available.",
-    "author": "chriztr"
+    "author": "chriztr",
+    "shaderCount": 2546,
+    "pipelineCount": 6182
   },
   "0005000010144F00": {
     "name": "Super Smash Bros. U",
