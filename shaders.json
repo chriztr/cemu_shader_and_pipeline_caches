@@ -26,10 +26,10 @@
   "00050000101d6000": {
     "name": "FAST Racing NEO",
     "region": "EUR",
-    "comment": "Played a few cups.",
+    "comment": "Played through all the cups.",
     "author": "chriztr",
-    "shaderCount": 1544,
-    "pipelineCount": 2160
+    "shaderCount": 1695,
+    "pipelineCount": 2378
   },
   "000500001012f000": {
     "name": "FAST Racing NEO",
