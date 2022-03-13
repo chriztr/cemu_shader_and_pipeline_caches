@@ -27,7 +27,9 @@
     "name": "FAST Racing NEO",
     "region": "EUR",
     "comment": "Played a few cups.",
-    "author": "chriztr"
+    "author": "chriztr",
+    "shaderCount": 1544,
+    "pipelineCount": 2160
   },
   "000500001012f000": {
     "name": "FAST Racing NEO",
