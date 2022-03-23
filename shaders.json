@@ -152,10 +152,10 @@
   "00050000101ed800": {
     "name": "Tokyo Mirage Sessions #FE",
     "region": "USA",
-    "comment": "Just started a new game. Played through the prolouge.",
+    "comment": "Just started a new game. Played through the prolouge, etc.",
     "author": "chriztr",
-    "shaderCount": 1094,
-    "pipelineCount": 2635
+    "shaderCount": 1289,
+    "pipelineCount": 3443
   },
   "00050000101c4c00": {
     "name": "Xenoblade Chronicles X",
