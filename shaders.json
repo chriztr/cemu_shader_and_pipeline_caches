@@ -220,6 +220,14 @@
     "shaderCount": 2560,
     "pipelineCount": 1980
   },
+   "000500001019e500": {
+    "name": "Zelda Twilight Princess HD",
+    "region": "USA",
+    "comment": "Started a new game and became a wolfyboy and met Zelda",
+    "author": "chriztr",
+    "shaderCount": 761,
+    "pipelineCount": 514
+  },
   "0005000010143600": {
     "name": "Zelda Wind Waker HD",
     "region": "EUR",
