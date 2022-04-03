@@ -77,6 +77,14 @@
     "shaderCount": 10913,
     "pipelineCount": 10524
   },
+    "000500001010eb00": {
+    "name": "Mario Kart 8",
+    "region": "JPN",
+    "comment": "Played all cups including DLC + looping title screen",
+    "author": "chriztr",
+    "shaderCount": 11039,
+    "pipelineCount": 10617
+  },
   "0005000010101e00": {
     "name": "New Super Mario Bros U",
     "region": "EUR",
