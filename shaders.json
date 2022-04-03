@@ -160,10 +160,10 @@
     "0005000010100600": {
     "name": "Tekken Tag Tournament 2",
     "region": "JPN",
-    "comment": "Played through some stages for now",
+    "comment": "Played through some stages for now and let the game loop through some matches",
     "author": "chriztr",
-    "shaderCount": 771,
-    "pipelineCount": 960
+    "shaderCount": 1074,
+    "pipelineCount": 1440
   },
   "00050000101ed800": {
     "name": "Tokyo Mirage Sessions #FE",
