@@ -149,6 +149,14 @@
     "shaderCount": 2749,
     "pipelineCount": 5005
   },
+    "0005000010110e00": {
+    "name": "Super Smash Bros. U (大乱闘スマッシュブラザーズ for Wii U)",
+    "region": "JPN",
+    "comment": "I let the CPU play against each other on all maps",
+    "author": "chriztr",
+    "shaderCount": 3252,
+    "pipelineCount": 6280
+  },
   "000500001010f800": {
     "name": "Tekken Tag Tournament 2",
     "region": "EUR",
@@ -251,5 +259,13 @@
     "author": "chriztr",
     "shaderCount": 10941,
     "pipelineCount": 11862
+  }
+  "0005000010143500": {
+    "name": "Zelda Wind Waker HD",
+    "region": "USA",
+    "comment": "Started a new game. Still a WIP",
+    "author": "chriztr",
+    "shaderCount": 2779,
+    "pipelineCount": 2168
   }
 }
