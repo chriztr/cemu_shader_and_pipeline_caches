@@ -133,6 +133,14 @@
     "shaderCount": 3851,
     "pipelineCount": 4784
   },
+    "0005000010106100": {
+    "name": "Super Mario 3D World (スーパーマリオ ３Ｄワールド)",
+    "region": "JPN",
+    "comment": "Played through World 1",
+    "author": "chriztr",
+    "shaderCount": 1790,
+    "pipelineCount": 1812
+  },
   "0005000010145000": {
     "name": "Super Smash Bros. U",
     "region": "EUR",
@@ -259,7 +267,7 @@
     "author": "chriztr",
     "shaderCount": 10941,
     "pipelineCount": 11862
-  }
+  },
   "0005000010143500": {
     "name": "Zelda Wind Waker HD",
     "region": "USA",
