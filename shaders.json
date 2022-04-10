@@ -255,10 +255,10 @@
    "000500001019e500": {
     "name": "Zelda Twilight Princess HD",
     "region": "USA",
-    "comment": "Started a new game and became a wolfyboy and met Zelda",
+    "comment": "at kakariko in the beginning of the game",
     "author": "chriztr",
-    "shaderCount": 761,
-    "pipelineCount": 514
+    "shaderCount": 1204,
+    "pipelineCount": 842
   },
   "0005000010143600": {
     "name": "Zelda Wind Waker HD",
