@@ -255,10 +255,10 @@
    "000500001019e500": {
     "name": "Zelda Twilight Princess HD",
     "region": "USA",
-    "comment": "at kakariko in the beginning of the game",
+    "comment": "at kakariko in the beginning of the game, about to move on",
     "author": "chriztr",
-    "shaderCount": 1204,
-    "pipelineCount": 842
+    "shaderCount": 1444,
+    "pipelineCount": 1027
   },
   "0005000010143600": {
     "name": "Zelda Wind Waker HD",
