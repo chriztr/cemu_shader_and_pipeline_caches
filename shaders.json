@@ -136,7 +136,7 @@
     "0005000010106100": {
     "name": "Super Mario 3D World (スーパーマリオ ３Ｄワールド)",
     "region": "JPN",
-    "comment": "Played through World 1",
+    "comment": "Played through World 1 too 5",
     "author": "chriztr",
     "shaderCount": 2991,
     "pipelineCount": 3352
@@ -273,7 +273,7 @@
     "region": "USA",
     "comment": "Started a new game. Still a WIP",
     "author": "chriztr",
-    "shaderCount": 2779,
-    "pipelineCount": 2168
+    "shaderCount": 5242,
+    "pipelineCount": 4624
   }
 }
