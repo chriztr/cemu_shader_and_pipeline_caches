@@ -271,9 +271,9 @@
   "0005000010143500": {
     "name": "Zelda Wind Waker HD",
     "region": "USA",
-    "comment": "Started a new game. Still a WIP",
+    "comment": "Just entered the towers of Gods",
     "author": "chriztr",
-    "shaderCount": 5242,
-    "pipelineCount": 4624
+    "shaderCount": 6408,
+    "pipelineCount": 5848
   }
 }
