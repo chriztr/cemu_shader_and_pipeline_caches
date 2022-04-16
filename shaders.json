@@ -136,10 +136,10 @@
     "0005000010106100": {
     "name": "Super Mario 3D World (スーパーマリオ ３Ｄワールド)",
     "region": "JPN",
-    "comment": "At the end of the game casual playthrough",
+    "comment": "Played all levels except bonus stages",
     "author": "chriztr",
-    "shaderCount": 3464,
-    "pipelineCount": 4089
+    "shaderCount": 3716,
+    "pipelineCount": 4459
   },
   "0005000010145000": {
     "name": "Super Smash Bros. U",
