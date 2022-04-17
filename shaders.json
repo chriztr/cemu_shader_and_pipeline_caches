@@ -271,9 +271,9 @@
   "0005000010143500": {
     "name": "Zelda Wind Waker HD",
     "region": "USA",
-    "comment": "Just entered the towers of Gods",
+    "comment": "Played through the three first temples and back at Forsaken Fortrest",
     "author": "chriztr",
-    "shaderCount": 6408,
-    "pipelineCount": 5848
+    "shaderCount": 7532,
+    "pipelineCount": 7149
   }
 }
