@@ -271,9 +271,9 @@
   "0005000010143500": {
     "name": "Zelda Wind Waker HD",
     "region": "USA",
-    "comment": "Played through the three first temples and back at Forsaken Fortrest",
+    "comment": "Fresh game and currently at the Earth Temple",
     "author": "chriztr",
-    "shaderCount": 7532,
-    "pipelineCount": 7149
+    "shaderCount": 8303,
+    "pipelineCount": 7997
   }
 }
