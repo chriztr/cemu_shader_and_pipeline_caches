@@ -239,10 +239,10 @@
   "00050000101c9400": {
     "name": "Zelda Breath of The Wild",
     "region": "USA",
-    "comment": "Casual playthrough through all devine beast and beaten Ganon. Done over 110 shrines, 1st trail of the sword, etc",
-    "author": "chriztr",
-    "shaderCount": 8342,
-    "pipelineCount": 21845
+    "comment": "Casual playthrough through all devine beast and beaten Ganon. Done over 110 shrines, 1st trail of the sword, etc.",
+    "author": ["chriztr","Makonede"],
+    "shaderCount": 8425,
+    "pipelineCount": 22162
   },
   "000500001019e600": {
     "name": "Zelda Twilight Princess HD",
@@ -255,10 +255,10 @@
    "000500001019e500": {
     "name": "Zelda Twilight Princess HD",
     "region": "USA",
-    "comment": "at kakariko in the beginning of the game, about to move on",
+    "comment": "at the trail of the master sword.",
     "author": "chriztr",
-    "shaderCount": 1444,
-    "pipelineCount": 1027
+    "shaderCount": 1827,
+    "pipelineCount": 1337
   },
   "0005000010143600": {
     "name": "Zelda Wind Waker HD",
