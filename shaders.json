@@ -255,10 +255,10 @@
    "000500001019e500": {
     "name": "Zelda Twilight Princess HD",
     "region": "USA",
-    "comment": "at the trail of the master sword.",
+    "comment": "working on collecting the mirror parts",
     "author": "chriztr",
-    "shaderCount": 1827,
-    "pipelineCount": 1337
+    "shaderCount": 1995,
+    "pipelineCount": 1461
   },
   "0005000010143600": {
     "name": "Zelda Wind Waker HD",
