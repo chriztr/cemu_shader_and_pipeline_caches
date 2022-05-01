@@ -271,9 +271,9 @@
   "0005000010143500": {
     "name": "Zelda Wind Waker HD",
     "region": "USA",
-    "comment": "Fresh game and currently at the Earth Temple",
+    "comment": "Fresh game and currently at the end of Wind Temple",
     "author": "chriztr",
-    "shaderCount": 8303,
-    "pipelineCount": 7997
+    "shaderCount": 9338,
+    "pipelineCount": 9337
   }
 }
