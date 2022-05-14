@@ -15,6 +15,14 @@
     "shaderCount": 1345,
     "pipelineCount": 1352
   },
+   "0005000010180600": {
+    "name": "Captain Toad: Treasure Tracker",
+    "region": "USA",
+    "comment": "Played through the first six levels",
+    "author": "chriztr",
+    "shaderCount": 627,
+    "pipelineCount": 537
+  },
   "0005000010138300": {
     "name": "Donkey Kong Country Tropical Freeze",
     "region": "EUR",
@@ -51,7 +59,9 @@
     "name": "Fatal Frame / Project Zero Maiden of Black Waters",
     "region": "EUR",
     "comment": "Played through the four first drops in the game.",
-    "author": "chriztr"
+    "author": "chriztr",
+	"shaderCount": 770,
+    "pipelineCount": 1224
   },
   "000500001014d200": {
     "name": "Fatal Frame / Project Zero Maiden of Black Waters (零 ～濡鴉ノ巫女～)",
@@ -116,6 +126,14 @@
     "author": ["chriztr","Octo#4533"],
     "shaderCount": 6642,
     "pipelineCount": 12233
+  },
+   "0005000010176900": {
+    "name": "Splatoon",
+    "region": "USA",
+    "comment": "Just launched the game, haven't really done much yet",
+    "author": "chriztr",
+    "shaderCount": 1994,
+    "pipelineCount": 2213
   },
   "0005000010145d00": {
     "name": "Super Mario 3D World",
@@ -257,8 +275,8 @@
     "region": "USA",
     "comment": "working on collecting the mirror parts",
     "author": "chriztr",
-    "shaderCount": 1995,
-    "pipelineCount": 1461
+    "shaderCount": 2023,
+    "pipelineCount": 1479
   },
   "0005000010143600": {
     "name": "Zelda Wind Waker HD",
