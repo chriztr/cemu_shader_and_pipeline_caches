@@ -273,10 +273,10 @@
    "000500001019e500": {
     "name": "Zelda Twilight Princess HD",
     "region": "USA",
-    "comment": "working on collecting the mirror parts",
+    "comment": "At Twilight Palace",
     "author": "chriztr",
-    "shaderCount": 2221,
-    "pipelineCount": 1643
+    "shaderCount": 2315,
+    "pipelineCount": 1703
   },
   "0005000010143600": {
     "name": "Zelda Wind Waker HD",
