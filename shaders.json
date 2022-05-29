@@ -84,8 +84,8 @@
     "region": "USA",
     "comment": "Played all cups including DLC + looping title screen",
     "author": "chriztr",
-    "shaderCount": 10986,
-    "pipelineCount": 10591
+    "shaderCount": 11131,
+    "pipelineCount": 10777
   },
     "000500001010eb00": {
     "name": "Mario Kart 8",
@@ -273,10 +273,10 @@
    "000500001019e500": {
     "name": "Zelda Twilight Princess HD",
     "region": "USA",
-    "comment": "At Twilight Palace",
+    "comment": "Completed the game with a causal playthough, watched the end credits as well.",
     "author": "chriztr",
-    "shaderCount": 2401,
-    "pipelineCount": 1753
+    "shaderCount": 2537,
+    "pipelineCount": 1876
   },
   "0005000010143600": {
     "name": "Zelda Wind Waker HD",
