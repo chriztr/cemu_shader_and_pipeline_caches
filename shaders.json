@@ -130,10 +130,10 @@
    "0005000010176900": {
     "name": "Splatoon",
     "region": "USA",
-    "comment": "Just launched the game, haven't really done much yet",
+    "comment": "Played a few turfs",
     "author": "chriztr",
-    "shaderCount": 2543,
-    "pipelineCount": 2893
+    "shaderCount": 2800,
+    "pipelineCount": 3381
   },
   "0005000010145d00": {
     "name": "Super Mario 3D World",
