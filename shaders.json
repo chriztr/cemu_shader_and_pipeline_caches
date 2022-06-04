@@ -111,6 +111,14 @@
     "shaderCount": 1100,
     "pipelineCount": 2000
   },
+  "000500001f600b00": {
+    "name": "Paper Mario Color Splash",
+    "region": "EUR",
+    "comment": "Played a little bit.",
+    "author": "chriztr",
+    "shaderCount": 522,
+    "pipelineCount": 2439
+  },
   "000500001012be00": {
     "name": "Pikmin 3",
     "region": "EUR",
