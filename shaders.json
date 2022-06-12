@@ -242,10 +242,10 @@
    "0005000010184d00": {
     "name": "Yoshi's Woolly World",
     "region": "USA",
-    "comment": "Played through world 1 and world 2, started a level in world 3",
+    "comment": "Played through world 1, 2 and world 3, started a level in world 4",
     "author": "chriztr",
-    "shaderCount": 2282,
-    "pipelineCount": 3012
+    "shaderCount": 2683,
+    "pipelineCount": 3671
   },
   "00050000101c9500": {
     "name": "Zelda Breath of The Wild",
