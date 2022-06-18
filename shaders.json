@@ -297,9 +297,9 @@
   "0005000010143500": {
     "name": "Zelda Wind Waker HD",
     "region": "USA",
-    "comment": "Fresh game and currently at the end of Wind Temple",
-    "author": "chriztr",
-    "shaderCount": 9338,
-    "pipelineCount": 9337
+    "comment": "From a completionist almost 100% full run (only a few ocean treasures were missing that were just rupees)",
+    "author": ["chriztr","darkcube"],
+    "shaderCount": 14106,
+    "pipelineCount": 23872
   }
 }
