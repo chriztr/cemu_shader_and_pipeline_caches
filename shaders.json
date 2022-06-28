@@ -305,9 +305,9 @@
   "0005000010143400": {
     "name": "Zelda Wind Waker HD",
     "region": "JPN",
-    "comment": "Done the first temple, on my way to the 2nd one",
+    "comment": "Done the 2nd temple",
     "author": "chriztr",
-    "shaderCount": 4635,
-    "pipelineCount": 3826
+    "shaderCount": 5119,
+    "pipelineCount": 4425
   }
 }
