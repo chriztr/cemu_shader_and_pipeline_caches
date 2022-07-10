@@ -321,9 +321,9 @@
   "0005000010143400": {
     "name": "Zelda Wind Waker HD (ゼルダの伝説 風のタクト)",
     "region": "JPN",
-    "comment": "Did the 2nd temple, got bombs",
+    "comment": "Did the 3nd temple, got master sword",
     "author": "chriztr",
-    "shaderCount": 5644,
-    "pipelineCount": 4982
+    "shaderCount": 7111,
+    "pipelineCount": 6652
   }
 }
