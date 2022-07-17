@@ -250,10 +250,10 @@
    "0005000010184d00": {
     "name": "Yoshi's Woolly World",
     "region": "USA",
-    "comment": "Played through world 1, 2 and world 3, started a level in world 4",
-    "author": "chriztr",
-    "shaderCount": 2683,
-    "pipelineCount": 3671
+    "comment": "All worlds played through expect 6. Half-way through.",
+    "author": ["chriztr","1santiaguito"],
+    "shaderCount": 4003,
+    "pipelineCount": 10332
   },
     "0005000010131f00": {
     "name": "Yoshi's Woolly World (ヨッシーウールワールド)",
@@ -321,9 +321,9 @@
   "0005000010143400": {
     "name": "Zelda Wind Waker HD (ゼルダの伝説 風のタクト)",
     "region": "JPN",
-    "comment": "Did the 3nd temple, got master sword, found Zelda",
+    "comment": "I have a mirror shield now!",
     "author": "chriztr",
-    "shaderCount": 7592,
-    "pipelineCount": 7154
+    "shaderCount": 8446,
+    "pipelineCount": 8033
   }
 }
