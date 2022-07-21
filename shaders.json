@@ -90,10 +90,10 @@
   "000500001010ec00": {
     "name": "Mario Kart 8",
     "region": "USA",
-    "comment": "Played all cups including DLC + looping title screen",
-    "author": "chriztr",
-    "shaderCount": 11131,
-    "pipelineCount": 10777
+    "comment": "Complete game, merged with BiZkViT's even more complete playthrough",
+    "author": ["chriztr","BiZkViT"]
+    "shaderCount": 11860,
+    "pipelineCount": 22056
   },
     "000500001010eb00": {
     "name": "Mario Kart 8",
@@ -102,6 +102,14 @@
     "author": "chriztr",
     "shaderCount": 11039,
     "pipelineCount": 10617
+  },
+    "00050000101a3500": {
+    "name": "Mario Tennis Ultra Smash",
+    "region": "USA",
+    "comment": "Full / close to full cache?",
+    "author": "BiZkViT",
+    "shaderCount": 1183,
+    "pipelineCount": 1317
   },
   "0005000010101e00": {
     "name": "New Super Mario Bros U",
@@ -146,10 +154,10 @@
    "0005000010176900": {
     "name": "Splatoon",
     "region": "USA",
-    "comment": "Played a few turfs",
-    "author": "chriztr",
-    "shaderCount": 2800,
-    "pipelineCount": 3381
+    "comment": "Played a few turfs myself and merged with BiZkViT's playthrough",
+    "author": ["chriztr","BiZkViT"]
+    "shaderCount": 4889,
+    "pipelineCount": 9199
   },
   "0005000010145d00": {
     "name": "Super Mario 3D World",
