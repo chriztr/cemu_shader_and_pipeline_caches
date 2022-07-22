@@ -91,7 +91,7 @@
     "name": "Mario Kart 8",
     "region": "USA",
     "comment": "Complete game, merged with BiZkViT's even more complete playthrough",
-    "author": ["chriztr","BiZkViT"]
+    "author": ["chriztr","BiZkViT"],
     "shaderCount": 11860,
     "pipelineCount": 22056
   },
@@ -155,7 +155,7 @@
     "name": "Splatoon",
     "region": "USA",
     "comment": "Played a few turfs myself and merged with BiZkViT's playthrough",
-    "author": ["chriztr","BiZkViT"]
+    "author": ["chriztr","BiZkViT"],
     "shaderCount": 4889,
     "pipelineCount": 9199
   },
