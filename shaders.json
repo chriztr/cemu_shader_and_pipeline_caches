@@ -79,6 +79,14 @@
     "shaderCount": 836,
     "pipelineCount": 1471
   },
+  "00050000101abc00": {
+    "name": "Kirby and the Rainbow Curse",
+    "region": "USA",
+    "comment": "Not 100%, but I played each level for more than a minute, including bosses and all UI menu staff.",
+    "author": "BiZkViT",
+    "shaderCount": 2824,
+    "pipelineCount": 0
+  },
   "000500001010ed00": {
     "name": "Mario Kart 8",
     "region": "EUR",
@@ -93,7 +101,7 @@
     "comment": "Complete game, merged with BiZkViT's even more complete playthrough",
     "author": ["chriztr","BiZkViT"],
     "shaderCount": 11860,
-    "pipelineCount": 22056
+    "pipelineCount": 10777
   },
     "000500001010eb00": {
     "name": "Mario Kart 8",
@@ -109,7 +117,7 @@
     "comment": "Full / close to full cache?",
     "author": "BiZkViT",
     "shaderCount": 1183,
-    "pipelineCount": 1317
+    "pipelineCount": 0
   },
   "0005000010101e00": {
     "name": "New Super Mario Bros U",
@@ -157,7 +165,7 @@
     "comment": "Played a few turfs myself and merged with BiZkViT's playthrough",
     "author": ["chriztr","BiZkViT"],
     "shaderCount": 4889,
-    "pipelineCount": 9199
+    "pipelineCount": 3381
   },
   "0005000010145d00": {
     "name": "Super Mario 3D World",
