@@ -15,6 +15,14 @@
     "shaderCount": 1183,
     "pipelineCount": 2569 
   },
+  "0005000010146800": {
+    "name": "Call of Duty: Ghosts",
+    "region": "USA",
+    "comment": "",
+    "author": "Niko",
+    "shaderCount": 2985,
+    "pipelineCount": 4202
+  },
   "0005000010180700": {
     "name": "Captain Toad: Treasure Tracker",
     "region": "EUR",
@@ -30,6 +38,14 @@
     "author": "chriztr",
     "shaderCount": 1121,
     "pipelineCount": 1076
+  },
+   "00050000101a4f01": {
+    "name": "Cube Life: Pixel Action Heroes Demo",
+    "region": "USA",
+    "comment": "",
+    "author": "Niko",
+    "shaderCount": 49,
+    "pipelineCount": 42
   },
   "0005000010138300": {
     "name": "Donkey Kong Country Tropical Freeze",
@@ -83,9 +99,41 @@
     "name": "Kirby and the Rainbow Curse",
     "region": "USA",
     "comment": "Not 100%, but I played each level for more than a minute, including bosses and all UI menu staff.",
-    "author": "BiZkViT",
+    "author": ["BiZkViT","Niko"],
     "shaderCount": 2824,
-    "pipelineCount": 0
+    "pipelineCount": 433
+  },
+  "00050000101a6500": {
+    "name": "Kung Fu Panda Showdown of Legendary Legends",
+    "region": "USA",
+    "comment": "",
+    "author": "Niko",
+    "shaderCount": 94,
+    "pipelineCount": 107
+  },
+  "00050000101bef00": {
+    "name": "LEGO® MARVEL's Avengers",
+    "region": "USA",
+    "comment": "",
+    "author": "Niko",
+    "shaderCount": 668,
+    "pipelineCount": 698
+  },
+  "00050000101a6200": {
+    "name": "LEGO® Jurassic World™",
+    "region": "USA",
+    "comment": "",
+    "author": "Niko",
+    "shaderCount": 858,
+    "pipelineCount": 932
+  },
+  "00050000101a4800": {
+    "name": "Lost Reavers",
+    "region": "USA",
+    "comment": "",
+    "author": "Niko",
+    "shaderCount": 111,
+    "pipelineCount": 69
   },
   "000500001010ed00": {
     "name": "Mario Kart 8",
@@ -115,9 +163,9 @@
     "name": "Mario Tennis Ultra Smash",
     "region": "USA",
     "comment": "Full / close to full cache?",
-    "author": "BiZkViT",
+    "author": ["BiZkViT","Niko"],
     "shaderCount": 1183,
-    "pipelineCount": 0
+    "pipelineCount": 2041
   },
   "0005000010101e00": {
     "name": "New Super Mario Bros U",
@@ -143,6 +191,14 @@
     "shaderCount": 676,
     "pipelineCount": 4275
   },
+  "000500001f600a00": {
+    "name": "Paper Mario Color Splash",
+    "region": "USA",
+    "comment": "Some gameplay",
+    "author": "Niko",
+    "shaderCount": 200,
+    "pipelineCount": 727
+  },
   "000500001012be00": {
     "name": "Pikmin 3",
     "region": "EUR",
@@ -163,9 +219,33 @@
     "name": "Splatoon",
     "region": "USA",
     "comment": "Played a few turfs myself and merged with BiZkViT's playthrough",
-    "author": ["chriztr","BiZkViT"],
-    "shaderCount": 4889,
-    "pipelineCount": 3381
+    "author": ["chriztr","BiZkViT","Niko"],
+    "shaderCount": 6096,
+    "pipelineCount": 10341
+  },
+  "00050000101bec00": {
+    "name": "Star Fox Guard",
+    "region": "USA",
+    "comment": "",
+    "author": "Niko",
+    "shaderCount": 107,
+    "pipelineCount": 120
+  },
+  "00050000101b0400": {
+    "name": "Star Fox Zero",
+    "region": "USA",
+    "comment": "",
+    "author": "Niko",
+    "shaderCount": 29,
+    "pipelineCount": 24
+  },
+  "00050000101b9600": {
+    "name": "Super Destronaut",
+    "region": "USA",
+    "comment": "",
+    "author": "Niko",
+    "shaderCount": 8,
+    "pipelineCount": 6
   },
   "0005000010145d00": {
     "name": "Super Mario 3D World",
@@ -254,6 +334,14 @@
     "author": "chriztr",
     "shaderCount": 4568,
     "pipelineCount": 15820
+  },
+  "00050000101c4d00": {
+    "name": "Xenoblade Chronicles X",
+    "region": "USA",
+    "comment": "",
+    "author": "Niko",
+    "shaderCount": 3315,
+    "pipelineCount": 7231
   },
   "0005000010184e00": {
     "name": "Yoshi's Woolly World",
