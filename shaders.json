@@ -1,4 +1,12 @@
 {
+  "0005000010138b00": {
+    "name": "Assassin's Creed® IV Black Flag",
+    "region": "USA",
+    "comment": "",
+    "author": "Niko",
+    "shaderCount": 422,
+    "pipelineCount": 786 
+  },
   "000500001010ab00": {
     "name": "Batman Arkham City: Armored Edition",
     "region": "USA",
@@ -19,9 +27,9 @@
     "name": "Bayonetta 2",
     "region": "USA",
     "comment": "Story mode beaten / Game completed",
-    "author": "u/DeepUnknown",
+    "author": ["u/DeepUnknown","Niko"],
     "shaderCount": 1183,
-    "pipelineCount": 2569 
+    "pipelineCount": 3042 
   },
   "000500001010cf00": {
     "name": "Call of Duty: Black Ops II",
@@ -51,9 +59,9 @@
     "name": "Captain Toad: Treasure Tracker",
     "region": "USA",
     "comment": "At the end of the first chapter",
-    "author": "chriztr",
-    "shaderCount": 1121,
-    "pipelineCount": 1076
+    "author": ["chriztr","Niko"],
+    "shaderCount": 1130,
+    "pipelineCount": 1790
   },
    "00050000101a4f01": {
     "name": "Cube Life: Pixel Action Heroes Demo",
@@ -62,6 +70,14 @@
     "author": "Niko",
     "shaderCount": 49,
     "pipelineCount": 42
+  },
+   "000500001010ad00": {
+    "name": "Darksiders II",
+    "region": "USA",
+    "comment": "",
+    "author": "Niko",
+    "shaderCount": 418,
+    "pipelineCount": 431
   },
    "00050000101fa600": {
     "name": "Darksiders Warmastered Edition",
@@ -91,9 +107,9 @@
     "name": "Donkey Kong Country Tropical Freeze",
     "region": "USA",
     "comment": "Played my way to the forth island",
-    "author": "chriztr",
-    "shaderCount": 1214,
-    "pipelineCount": 876
+    "author": ["chriztr","Niko"],
+    "shaderCount": 1226,
+    "pipelineCount": 1162
   },
   "00050000101d6000": {
     "name": "FAST Racing NEO",
@@ -143,6 +159,22 @@
     "shaderCount": 94,
     "pipelineCount": 107
   },
+  "0005000010135e00": {
+    "name": "LEGO® Batman™ 2",
+    "region": "USA",
+    "comment": "",
+    "author": "Niko",
+    "shaderCount": 741,
+    "pipelineCount": 1001
+  },
+  "000500001016ad00": {
+    "name": "LEGO® Batman™ 3 Beyond Gotham",
+    "region": "USA",
+    "comment": "",
+    "author": "Niko",
+    "shaderCount": 1586,
+    "pipelineCount": 2335
+  },
   "0005000010101a00": {
     "name": "LEGO® CITY UNDERCOVER",
     "region": "USA",
@@ -167,6 +199,14 @@
     "shaderCount": 668,
     "pipelineCount": 698
   },
+  "0005000010132b00": {
+    "name": "LEGO® MARVEL Super Heroes",
+    "region": "USA",
+    "comment": "",
+    "author": "Niko",
+    "shaderCount": 1017,
+    "pipelineCount": 1104
+  },
   "00050000101dab00": {
     "name": "LEGO® STAR WARS™ The Force Awakens",
     "region": "USA",
@@ -175,6 +215,14 @@
     "shaderCount": 1248,
     "pipelineCount": 1523
   },
+  "000500001016a700": {
+    "name": "LEGO® The Hobbit™",
+    "region": "USA",
+    "comment": "",
+    "author": "Niko",
+    "shaderCount": 858,
+    "pipelineCount": 915
+  },
   "00050000101a4800": {
     "name": "Lost Reavers",
     "region": "USA",
@@ -182,6 +230,14 @@
     "author": "Niko",
     "shaderCount": 111,
     "pipelineCount": 69
+  },
+  "00050000101e5300": {
+    "name": "Mario & Sonic at the Rio 2016 Olympic Games",
+    "region": "USA",
+    "comment": "",
+    "author": "Niko",
+    "shaderCount": 347,
+    "pipelineCount": 697
   },
   "000500001010ed00": {
     "name": "Mario Kart 8",
@@ -230,6 +286,22 @@
     "author": "Luka Doncic",
     "shaderCount": 1100,
     "pipelineCount": 2000
+  },
+  "0005000010110a00": {
+    "name": "Ninja Gaiden 3: Razor's Edge",
+    "region": "USA",
+    "comment": "",
+    "author": "Niko",
+    "shaderCount": 237,
+    "pipelineCount": 274
+  },
+  "0005000010102000": {
+    "name": "Nintendo Land",
+    "region": "USA",
+    "comment": "",
+    "author": "Niko",
+    "shaderCount": 1092,
+    "pipelineCount": 2120
   },
   "000500001f600b00": {
     "name": "Paper Mario Color Splash",
@@ -367,6 +439,30 @@
     "shaderCount": 1074,
     "pipelineCount": 1440
   },
+  "000500001011c300": {
+    "name": "The Amazing Spider-Man",
+    "region": "USA",
+    "comment": "",
+    "author": "Niko",
+    "shaderCount": 728,
+    "pipelineCount": 743
+  },
+  "0005000010146a00": {
+    "name": "The Amazing Spider-Man 2™",
+    "region": "USA",
+    "comment": "",
+    "author": "Niko",
+    "shaderCount": 2094,
+    "pipelineCount": 3740
+  },
+  "000500001014de00": {
+    "name": "The LEGO® Movie Videogame",
+    "region": "USA",
+    "comment": "",
+    "author": "Niko",
+    "shaderCount": 656,
+    "pipelineCount": 710
+  },
   "00050000101ed800": {
     "name": "Tokyo Mirage Sessions #FE",
     "region": "USA",
@@ -374,6 +470,14 @@
     "author": "chriztr",
     "shaderCount": 1475,
     "pipelineCount": 4995
+  },
+  "000500001014c100": {
+    "name": "Transformers: Rise of the Dark Spark",
+    "region": "USA",
+    "comment": "",
+    "author": "Niko",
+    "shaderCount": 645,
+    "pipelineCount": 256
   },
   "00050000101c4c00": {
     "name": "Xenoblade Chronicles X",
@@ -403,9 +507,9 @@
     "name": "Yoshi's Woolly World",
     "region": "USA",
     "comment": "100% playthrough by 1santiaguito",
-    "author": "1santiaguito",
+    "author": ["1santiaguito","Niko"],
     "shaderCount": 4324,
-    "pipelineCount": 11127
+    "pipelineCount": 13768
   },
     "0005000010131f00": {
     "name": "Yoshi's Woolly World (ヨッシーウールワールド)",
@@ -434,9 +538,9 @@
     "name": "Zelda Breath of The Wild",
     "region": "USA",
     "comment": "Casual playthrough through all devine beast and beaten Ganon. Done over 110 shrines, 1st trail of the sword, etc.",
-    "author": ["chriztr","Makonede"],
-    "shaderCount": 8655,
-    "pipelineCount": 30455
+    "author": ["chriztr","Makonede","Niko"],
+    "shaderCount": 8657,
+    "pipelineCount": 36280
   },
   "000500001019e600": {
     "name": "Zelda Twilight Princess HD",
