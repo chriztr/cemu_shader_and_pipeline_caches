@@ -1,4 +1,12 @@
 {
+  "000500001010ab00": {
+    "name": "Batman Arkham City: Armored Edition",
+    "region": "USA",
+    "comment": "",
+    "author": "Niko",
+    "shaderCount": 1211,
+    "pipelineCount": 1922 
+  },
   "0005000010172700": {
     "name": "Bayonetta 2",
     "region": "EUR",
@@ -14,6 +22,14 @@
     "author": "u/DeepUnknown",
     "shaderCount": 1183,
     "pipelineCount": 2569 
+  },
+  "000500001010cf00": {
+    "name": "Call of Duty: Black Ops II",
+    "region": "USA",
+    "comment": "",
+    "author": "Niko",
+    "shaderCount": 3402,
+    "pipelineCount": 4158
   },
   "0005000010146800": {
     "name": "Call of Duty: Ghosts",
@@ -46,6 +62,22 @@
     "author": "Niko",
     "shaderCount": 49,
     "pipelineCount": 42
+  },
+   "00050000101fa600": {
+    "name": "Darksiders Warmastered Edition",
+    "region": "USA",
+    "comment": "",
+    "author": "Niko",
+    "shaderCount": 979,
+    "pipelineCount": 759
+  },
+   "000500001012ba00": {
+    "name": "Deus EX: Human Rev. Director's Cut",
+    "region": "USA",
+    "comment": "",
+    "author": "Niko",
+    "shaderCount": 718,
+    "pipelineCount": 1073
   },
   "0005000010138300": {
     "name": "Donkey Kong Country Tropical Freeze",
@@ -111,13 +143,13 @@
     "shaderCount": 94,
     "pipelineCount": 107
   },
-  "00050000101bef00": {
-    "name": "LEGO® MARVEL's Avengers",
+  "0005000010101a00": {
+    "name": "LEGO® CITY UNDERCOVER",
     "region": "USA",
     "comment": "",
     "author": "Niko",
-    "shaderCount": 668,
-    "pipelineCount": 698
+    "shaderCount": 1586,
+    "pipelineCount": 2335
   },
   "00050000101a6200": {
     "name": "LEGO® Jurassic World™",
@@ -126,6 +158,22 @@
     "author": "Niko",
     "shaderCount": 858,
     "pipelineCount": 932
+  },
+  "00050000101bef00": {
+    "name": "LEGO® MARVEL's Avengers",
+    "region": "USA",
+    "comment": "",
+    "author": "Niko",
+    "shaderCount": 668,
+    "pipelineCount": 698
+  },
+  "00050000101dab00": {
+    "name": "LEGO® STAR WARS™ The Force Awakens",
+    "region": "USA",
+    "comment": "",
+    "author": "Niko",
+    "shaderCount": 1248,
+    "pipelineCount": 1523
   },
   "00050000101a4800": {
     "name": "Lost Reavers",
@@ -146,10 +194,10 @@
   "000500001010ec00": {
     "name": "Mario Kart 8",
     "region": "USA",
-    "comment": "Complete game, merged with BiZkViT's even more complete playthrough",
-    "author": ["chriztr","BiZkViT"],
-    "shaderCount": 11860,
-    "pipelineCount": 10777
+    "comment": "Complete game",
+    "author": ["chriztr","BiZkViT","Niko"],
+    "shaderCount": 11884,
+    "pipelineCount": 15814
   },
     "000500001010eb00": {
     "name": "Mario Kart 8",
@@ -259,9 +307,9 @@
     "name": "Super Mario 3D World",
     "region": "USA",
     "comment": "Played all levels including bonus stages.",
-    "author": "Haruki1707",
-    "shaderCount": 3851,
-    "pipelineCount": 4784
+    "author": ["Haruki1707","Niko"],
+    "shaderCount": 3929,
+    "pipelineCount": 8040
   },
     "0005000010106100": {
     "name": "Super Mario 3D World (スーパーマリオ ３Ｄワールド)",
@@ -283,9 +331,9 @@
     "name": "Super Smash Bros. U",
     "region": "USA",
     "comment": "I let the CPU play against each other on some maps",
-    "author": "chriztr",
-    "shaderCount": 2749,
-    "pipelineCount": 5005
+  "author": ["chriztr","Niko"],
+    "shaderCount": 3054,
+    "pipelineCount": 8689
   },
     "0005000010110e00": {
     "name": "Super Smash Bros. U (大乱闘スマッシュブラザーズ for Wii U)",
