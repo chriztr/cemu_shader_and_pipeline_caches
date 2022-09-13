@@ -44,7 +44,7 @@ export default {
       A collection of shader and pipeline caches made by me and submitted by others.<br>
       Make sure the title ID match with your own. Most of my games are european copies.<br>
       Submissions from other people might be different regions.<br>
-      Shaders should work for both regions (you need to rename the cache to match your ID), however the pipelines won't.<br>
+      Shaders should work for all regions (you need to rename the cache to match your ID), however the pipelines won't.<br>
 	  <b>Want to contribute?</b> Contact me on discord (chriz#7310) or on reddit (<a href="https://www.reddit.com/user/chriztr">reddit.com/user/chriztr</a>)<br>
 	  Make sure you have verified / good game files and no game changing mods!
     </p>
