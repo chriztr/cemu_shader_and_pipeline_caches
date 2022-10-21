@@ -244,8 +244,8 @@
     "region": "EUR",
     "comment": "Played through every map including DLC and a few trails",
     "author": ["RMED24","chriztr"],
-    "shaderCount": 11259,
-    "pipelineCount": 10835
+    "shaderCount": 11391,
+    "pipelineCount": 10953
   },
   "000500001010ec00": {
     "name": "Mario Kart 8",
@@ -498,10 +498,10 @@
   "0005000010184e00": {
     "name": "Yoshi's Woolly World",
     "region": "EUR",
-    "comment": "Gone through the maps in 1st, 2nd and 3rd world + some extra for now.",
-    "author": ["chriztr","Tomk007"],
-    "shaderCount": 3329,
-    "pipelineCount": 9375
+    "comment": "Normal playthrough.",
+    "author": ["chriztr","Tomk007","bell07"],
+    "shaderCount": 4129,
+    "pipelineCount": 11142
   },
    "0005000010184d00": {
     "name": "Yoshi's Woolly World",
