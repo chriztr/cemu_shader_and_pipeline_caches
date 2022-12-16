@@ -482,10 +482,10 @@
   "00050000101c4c00": {
     "name": "Xenoblade Chronicles X",
     "region": "EUR",
-    "comment": "Chapter 2+ random running around",
-    "author": "chriztr",
-    "shaderCount": 4568,
-    "pipelineCount": 15820
+    "comment": "I completed the game yesterday after about 65+ hours of playtime. I definitely didn't do everything, but I think this cache should cover a lot if not most of what CEMU will outpu",
+    "author": "romatthe",
+    "shaderCount": 7860,
+    "pipelineCount": 34695
   },
   "00050000101c4d00": {
     "name": "Xenoblade Chronicles X",
