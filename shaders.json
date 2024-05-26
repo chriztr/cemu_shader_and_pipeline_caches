@@ -260,8 +260,8 @@
     "region": "JPN",
     "comment": "Played all cups including DLC + looping title screen",
     "author": "chriztr",
-    "shaderCount": 11039,
-    "pipelineCount": 10617
+    "shaderCount": 11127,
+    "pipelineCount": 10750
   },
     "00050000101a3500": {
     "name": "Mario Tennis Ultra Smash",
@@ -388,8 +388,8 @@
     "region": "JPN",
     "comment": "Played all levels except bonus stages",
     "author": "chriztr",
-    "shaderCount": 3716,
-    "pipelineCount": 4459
+    "shaderCount": 3760,
+    "pipelineCount": 5106
   },
   "0005000010145000": {
     "name": "Super Smash Bros. U",
@@ -546,9 +546,9 @@
     "name": "Zelda Twilight Princess HD",
     "region": "EUR",
     "comment": "Completed the game with a causal playthough, watched the end credits as well.",
-    "author": "chriztr",
-    "shaderCount": 2560,
-    "pipelineCount": 1980
+    "author": ["chriztr","bell07"],
+    "shaderCount": 2628,
+    "pipelineCount": 2027
   },
    "000500001019e500": {
     "name": "Zelda Twilight Princess HD",
@@ -561,10 +561,10 @@
   "0005000010143600": {
     "name": "Zelda Wind Waker HD",
     "region": "EUR",
-    "comment": "Almost completed the game. Currently at the end facing Ganon",
-    "author": "chriztr",
-    "shaderCount": 10941,
-    "pipelineCount": 11862
+    "comment": "Game played through",
+    "author": ["chriztr","bell07"],
+    "shaderCount": 11702,
+    "pipelineCount": 17555
   },
   "0005000010143500": {
     "name": "Zelda Wind Waker HD",
