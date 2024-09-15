@@ -39,19 +39,22 @@ export default {
 
 <template>
   <div class="main">
-    <h1>Unofficial caches for cemu 1.25 and newer</h1>
+    <h1>Shader and pipeline caches for Cemu 1.25, 1.26 and Cemu 2.x</h1>
     <p>
       A collection of shader and pipeline caches made by me and submitted by others.<br>
+	  These shaders and pipelines works with any newer build from Cemu 1.25 and onwards, including experimental ones.<br>
       Make sure the title ID match with your own. Most of my games are european copies.<br>
       Submissions from other people might be different regions.<br>
-      Shaders should work for all regions (you need to rename the cache to match your ID), however the pipelines won't.<br>
-	  <b>Want to contribute?</b> Contact me on discord (chriz#7310) or on reddit (<a href="https://www.reddit.com/user/chriztr">reddit.com/user/chriztr</a>)<br>
+      Shaders should work for all regions (you need to rename the cache to match your ID), however the pipelines won't.<br><br>
+	  <b>Want to contribute?</b> Contact me on discord (chriztr) or on reddit (<a href="https://www.reddit.com/user/chriztr">reddit.com/user/chriztr</a>)<br>
 	  Make sure you have verified / good game files and no game changing mods!
     </p>
     
     <h3>How to install the caches</h3>
-    <p>Extract the <code>.zip</code> file into your Cemu folder.</p>
-    
+    <p>
+		Open Cemu's installation folder by Cemu’s <code>File -> Open Cemu Folder</code> command.<br>
+		Extract the <code>.zip</code> file into your Cemu folder.
+	</p>
     <hr>
 
     <p>
