@@ -56,6 +56,13 @@ export default {
 		Extract the <code>.zip</code> file into your Cemu folder.
 	</p>
     <hr>
+	
+	<h3>Looking for game saves?</h3>
+	<p>
+	I recently started a save collection github page for Cemu. Currently very WIP<br>
+	You can find it here:<br>
+	<a href="https://chriztr.github.io/wiiu-game-saves-for-cemu/">https://chriztr.github.io/wiiu-game-saves-for-cemu/</a>
+	</p>
 
     <p>
       <input 
