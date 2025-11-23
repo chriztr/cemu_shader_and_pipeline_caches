@@ -63,6 +63,12 @@ export default {
 	You can find it here:<br>
 	<a href="https://chriztr.github.io/wiiu-game-saves-for-cemu/">https://chriztr.github.io/wiiu-game-saves-for-cemu/</a>
 	</p>
+	<hr>
+	
+	<h3>MAC-Metal-specific Zelda Breath of the Wild shader cache</h3>
+	<p>Here's a cache created by Samuliak77 for <a href="./mac/botw_shader_cache.zip">Metal backend of cemu - about 9000 shaders</a><br>
+	To install, open <a href="https://github.com/SamoZ256/Cemu/releases">Samuliak's Cemu Metal Fork</a>, go <code>File/Open Shader Cache folder</code> and put the files in <code>/User/(your home folder)/Library/Caches/Cemu/shaderCache/transferable/</code>
+	</p>
 
     <p>
       <input 
