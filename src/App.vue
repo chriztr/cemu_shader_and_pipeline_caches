@@ -66,7 +66,7 @@ export default {
 	<hr>
 	
 	<h3>MAC-Metal-specific Zelda Breath of the Wild shader cache</h3>
-	<p>Here's a cache created by Samuliak77 for <a href="https://cdn.discordapp.com/attachments/1043595946719711283/1431880677090922576/botw_shader_cache.zip?ex=6923f04c&is=69229ecc&hm=4f2558c8dba6cc1d0022d67c7ff8ee61c2e4b8f8d978cc3313f69ec95faa8726&">Metal backend of cemu - about 9000 shaders</a><br>
+	<p>Here's a cache created by Samuliak77 for <a href="https://github.com/chriztr/cemu_shader_and_pipeline_caches/blob/main/mac/botw_shader_cache.zip">Metal backend of cemu - about 9000 shaders</a><br>
 	To install, open <a href="https://github.com/SamoZ256/Cemu/releases">Samuliak's Cemu Metal Fork</a>, go <code>File/Open Shader Cache folder</code> and put the files in <code>/User/(your home folder)/Library/Caches/Cemu/shaderCache/transferable/</code>
 	</p>
 
