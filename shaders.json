@@ -50,10 +50,10 @@
   "0005000010180700": {
     "name": "Captain Toad: Treasure Tracker",
     "region": "EUR",
-    "comment": "Played through the first chapther and some levels in chapther 2",
+    "comment": "Played through the first three chapthers and some of the bonus levels.",
     "author": "chriztr",
-    "shaderCount": 1345,
-    "pipelineCount": 1352
+    "shaderCount": 1975,
+    "pipelineCount": 2356
   },
    "0005000010180600": {
     "name": "Captain Toad: Treasure Tracker",
@@ -372,8 +372,8 @@
     "region": "EUR",
     "comment": "Played through all level except bonus stages.",
     "author": "chriztr",
-    "shaderCount": 3846,
-    "pipelineCount": 4639
+    "shaderCount": 4058,
+    "pipelineCount": 7320
   },
   "0005000010145c00": {
     "name": "Super Mario 3D World",
