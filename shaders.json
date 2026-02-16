@@ -402,10 +402,10 @@
   "0005000010144f00": {
     "name": "Super Smash Bros. U",
     "region": "USA",
-    "comment": "I let the CPU play against each other on some maps",
-  "author": ["chriztr","Niko"],
-    "shaderCount": 3054,
-    "pipelineCount": 8689
+    "comment": "I let the CPU play against each other on some maps / Game has been played a bit",
+    "author": ["fhAifN","chriztr","Niko"],
+    "shaderCount": 4160,
+    "pipelineCount": 11811
   },
     "0005000010110e00": {
     "name": "Super Smash Bros. U (大乱闘スマッシュブラザーズ for Wii U)",
